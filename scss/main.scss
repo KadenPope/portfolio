@@ -1,0 +1,62 @@
+@import 'config';
+@import 'menu';
+@import 'home';
+@import 'about';
+@import 'photography';
+
+h1, h2, h3 {
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: set-text-color($primary-color);
+}
+
+body {
+    color: set-text-color($secondary-color);
+    font-family: $font-style;
+    line-height: 1;
+    background-color: white;
+}
+
+.text-secondary {
+    color: $contrast-color;
+}
+
+header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    padding: 1rem;
+}
+
+footer {
+
+    background-color: $accent-color;
+    position: fixed;
+    bottom: 0;
+    color: set-text-color($accent-color);
+    width: 100vw;
+    line-height: 350%;
+    padding: 0 1.5rem;    
+    text-align: right;
+
+    .social-icon {
+        float: left;
+        color: set-text-color($primary-color);
+    }
+
+    .social-icons {
+        position: fixed;
+
+        a {
+            padding: 0 2.5vw 5vh 0;
+            @include transition-ease;
+
+            &:hover {
+                color: $contrast-color;
+            }
+        }
+    }
+}
