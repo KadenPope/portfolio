@@ -967,13 +967,15 @@ body {
 .photography .substrate-img {
   position: fixed;
   padding-top: 5vh;
-  top: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50vh;
   z-index: 2;
   margin: 0 auto;
-  max-width: 100vh;
+  width: auto;
+  height: auto;
+  max-width: 80%;
   max-height: 80vh;
   cursor: pointer;
 }
