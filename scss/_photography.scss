@@ -2,7 +2,7 @@
 .photography {
     margin: 0 auto;
     background-color: $secondary-color;
-    width: 85vw;
+    width: 80vw;
     padding-bottom: 10vh;
 
     .heading {
@@ -11,14 +11,38 @@
             color: $light-text-color;
             text-align: center;
             padding: 4vh 0 1vh 0;
-            font-size: 4em;
+            font-size: 1.5em;
+
+            @include media-md {
+                font-size: 2em;
+            }
+
+            @include media-lg {
+                font-size: 3em;
+            }
+
+            @include media-xl {
+                font-size: 3.5em;
+            }
         }
     
         h2 {
             color: $contrast-color;
             text-align: center;
             padding: 1vh 0 4vh 0;
-            font-size: 2.5em;
+            font-size: 1em;
+
+            @include media-md {
+                font-size: 1.5em;
+            }
+
+            @include media-lg {
+                font-size: 2em;
+            }
+
+            @include media-xl {
+                font-size: 2.5em;
+            }
         }
     }
 
@@ -28,52 +52,62 @@
         background-color: $primary-color;
         border: 5px solid $accent-color;
         border-bottom: none;
-         
-        -webkit-column-count: 4;
+
+        -moz-column-count:    1;
         -webkit-column-gap:   0px;
-        -moz-column-count:    4;
+        -webkit-column-count: 1;
         -moz-column-gap:      0px;
-        column-count:         4;
+        column-count:         1;
         column-gap:           0px;  
 
         img {
             border: 4px solid $accent-color;
             padding: 7px;
             cursor: pointer;
+            margin: 0 auto;
+
+            .img-substrate {
+                width: 80%;
+                margin: 0 auto;
+            }
         }
     }
-    
-    @media (max-width: 1200px) {
+
+    @include media-sm {
         #photos {
-            -moz-column-count:    3;
+            -moz-column-count:    1;
+            -webkit-column-count: 1;
+            column-count:         1;
+        }
+    }
+    @include media-md {
+        #photos {
+            -moz-column-count:    2;
+            -webkit-column-count: 2;
+            column-count:         2;
+        }
+    }
+    @include media-lg {
+        #photos {
             -webkit-column-count: 3;
+            -moz-column-count:    3;
             column-count:         3;
+    
         }
     }
-      @media (max-width: 1000px) {
+    @include media-xl {
         #photos {
-        -moz-column-count:    2;
-        -webkit-column-count: 2;
-        column-count:         2;
-        }
-      }
-      @media (max-width: 800px) {
-        #photos {
-        -moz-column-count:    2;
-        -webkit-column-count: 2;
-        column-count:         2;
-        }
-      }
-      @media (max-width: 400px) {
-        #photos {
-        -moz-column-count:    1;
-        -webkit-column-count: 1;
-        column-count:         1;
+            -webkit-column-count: 4;
+            -moz-column-count:    4;
+            column-count:         4;
+    
         }
     }
 }
 
 .photography {
+    position: relative;
+
     .substrate {
         height: 100%;
         width: 100%;
@@ -84,22 +118,26 @@
     }
         
     .substrate-bg {
+        position: fixed;
         background-color: rgba(0, 0, 0, .9);
         left: 0;
         top: 0;
         z-index: 1;
-        height: 100%;
-        width: 100vw;
+        height: 100vh;
+        width: 100%;
+        cursor: pointer;
     }
         
     .substrate-img {
+        position: fixed;
         padding-top: 5vh;
-        left: 0;
         top: 0;
-        margin: 0 auto;
+        left: 50%;
+        transform: translateX(-50%);
         z-index: 2;
-        width: auto;
-        height: 60vh;
+        margin: 0 auto;
+        max-width: 100vh;
+        max-height: 80vh;
         cursor: pointer;
     }
 }
