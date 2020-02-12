@@ -6,6 +6,15 @@
     color: $dark-text-color;
     position: relative;
 
+    @include media-md {
+        width: 90vw;
+    }
+
+    @include media-lg {
+        width: 100vw;
+        padding: 0 3vw 10vh 3vw;
+    }
+
     .side-nav {
         background-color: $contrast-color;
         position: fixed;
@@ -236,19 +245,27 @@
         &__skills {
             display: grid;
             grid-template-columns: 1fr;
+            grid-column-gap: 10px;
             width: 70%;
             margin: auto;
 
             @include media-md {
                 grid-template-columns: 1fr 1fr;
-                grid-column-gap: 30px;
+                grid-column-gap: 45px;
             }
+
+            @include media-lg {
+                grid-column-gap: 100px;
+            }
+
             .checked {
                 color: $accent-color;
             }
+
             .unchecked {
                 color: rgba($primary-color, .6);
             }
+
             dt {
                 float: left;
                 clear: both;
@@ -266,6 +283,7 @@
 
             @include media-md {
                 width: 80%;
+                grid-column-gap: 60px;
             }
 
             li {
