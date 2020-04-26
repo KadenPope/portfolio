@@ -12,7 +12,6 @@ a {
 body {
     color: set-text-color($secondary-color);
     font-family: $font-style;
-    line-height: 1;
     background-color: white;
 }
 
@@ -33,7 +32,7 @@ footer {
     bottom: 0;
     color: set-text-color($accent-color);
     width: 100vw;
-    line-height: 275%;
+    line-height: 200%;
     padding: 0 1.5rem;    
     text-align: right;
     font-size: .75em;

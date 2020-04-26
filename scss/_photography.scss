@@ -2,7 +2,7 @@
 .photography {
     margin: 0 auto;
     width: 80vw;
-    padding-bottom: 10vh;
+    padding: 0  0 10vh 0;
 
     &__photos {
         border: 5px solid $light-text-color;
@@ -39,12 +39,10 @@
             width: 100%;
             color: $light-text-color;
             text-align: center;
-            padding: 50px 10px;
             font-size: 1.75em;
 
             @include media-md {
-                padding: none;
-                line-height: 150%;
+                line-height: 140%;
                 border-right: 10px solid $light-text-color;
                 border-left: 10px solid $light-text-color;
             }
@@ -203,16 +201,13 @@
                 li {
                     list-style-type: square;
                     line-height: 125%;
-                    font-size: .8em;
-                    @include media-md {
-                        font-size: 1em;
-                    }
+                    font-size: .7em;
                 }
             }
         }
     }
 
     &__photos {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 }

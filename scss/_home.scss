@@ -7,7 +7,8 @@ body {
     margin: 1rem auto;
 
     h2 {
-        font-size: 1.15em;
+        font-size: 1em;
+        font-weight: normal;
     }
 
     .pages-grid {
@@ -29,20 +30,21 @@ body {
 
             background-color: $primary-color;
             text-align: center;
-            padding-top: .5rem;
             width: 100%;
+            padding: 2em 0 0 0;
 
             &--name {
                 font-size: 1.25em;
                 line-height: 120%;
-                
+
                 @include media-sm {
-                    padding: 3em 1em 1em 1em;
+                    padding: .5em 0 .5em 1em;
+                }
+
+                @include media-md {
+                    padding: .25em 0 .5em 1em;
                 }
     
-                @include media-lg {
-                    padding: 4em 1em 1em 1em;
-                }
             }
 
             &--tagline {
@@ -79,16 +81,19 @@ body {
             line-height: 140%;
             height: 25vh;
             width: 100%;
-            font-size: .7em;
+            font-size: .6em;
+            a {
+                color: $contrast-color;
+            }
         }
 
         &__link-text {
             position: absolute;
             text-align: center;
-            padding: 1.5rem 0;
+            padding: 1em 0;
             color: $light-text-color;
             width: 100%;
-            background-color: rgba($secondary-color, .75)
+            background-color: rgba($secondary-color, .75);
         }
 
         &__img {
@@ -101,6 +106,7 @@ body {
 @include media-md {
     .home {
         width: 90vw;
+        padding: 0 3vw 10vh 3vw;
 
         .pages-grid {
             width: 100%;
@@ -124,7 +130,7 @@ body {
 @include media-lg {
     .home {
         width: 100vw;
-        padding: 0 3vw 10vh 3vw;
+        padding: 0 3vw 1vh 3vw;
 
         .pages-grid {
             width: 100%;
@@ -138,14 +144,12 @@ body {
             "photography  photography   design  design      contact";
 
             &__name--name {
-                padding: 1rem 10px;
+                padding: 0 10px 1em 10px;
             }
 
             &__contact {
-                padding-top: 60%;
-                a {
-                    color: $contrast-color;
-                }
+                align-items: center;
+                padding: 6em 0 0 0;
             }
         }
     }

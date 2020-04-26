@@ -17,11 +17,11 @@
     }
 
     li {
-        font-size: .7em;
+        font-size: .65em;
     }
 
     p {
-        font-size: .75em;
+        font-size: .65em;
     }
 
 
@@ -159,22 +159,22 @@
                 grid-gap: 4vh;
                 grid-template-columns: 1fr 1fr;
             }
-
-            &--text {
-                padding-bottom: 6vh;
-            }
     
             &--headshot {
                 width: 70%;
                 max-width: 250px;
                 margin: auto;
-                padding-bottom: 7vh;
+                padding-bottom: 5vh;
     
                 &-border {
                     border-radius: 50%;
                     border: 9px solid $accent-color;
                 }
-            }  
+            }
+
+            &--text {
+                padding: .5em 1.5em 0 0;
+            }
         }
 
         &__contact {
@@ -396,6 +396,7 @@
                     position: absolute;
                     top: 0px;
                     background-color: rgba($primary-color, .9);
+                    font-weight: normal;
                 }
                 img {
                     height: 100%;
