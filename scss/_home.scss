@@ -1,10 +1,6 @@
-body {
-    background-color: $light-text-color;
-    // min-height: 100px;
-}
 .home {
-    width: 80vw;
-    margin: 1rem auto;
+    width: 95vw;
+    margin: 1em auto;
 
     h2 {
         font-size: 1em;
@@ -105,7 +101,6 @@ body {
 
 @include media-md {
     .home {
-        width: 90vw;
         padding: 0 3vw 10vh 3vw;
 
         .pages-grid {
@@ -129,7 +124,6 @@ body {
 
 @include media-lg {
     .home {
-        width: 100vw;
         padding: 0 3vw 1vh 3vw;
 
         .pages-grid {

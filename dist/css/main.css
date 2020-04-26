@@ -12,6 +12,7 @@
 html {
   font-size: calc(1em + 1vw);
   line-height: 110%;
+  font-weight: normal;
 }
 
 img {
@@ -97,19 +98,19 @@ li {
   visibility: visible;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .nav {
     width: 30vw;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
   .nav {
     width: 20vw;
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 100em) {
   .nav {
     width: 15vw;
   }
@@ -204,13 +205,9 @@ li {
           transition-delay: 0.75s;
 }
 
-body {
-  background-color: white;
-}
-
 .home {
-  width: 80vw;
-  margin: 1rem auto;
+  width: 95vw;
+  margin: 1em auto;
 }
 
 .home h2 {
@@ -246,13 +243,13 @@ body {
   line-height: 120%;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 28em) {
   .home .pages-grid__name--name {
     padding: .5em 0 .5em 1em;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .home .pages-grid__name--name {
     padding: .25em 0 .5em 1em;
   }
@@ -320,9 +317,8 @@ body {
   height: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .home {
-    width: 90vw;
     padding: 0 3vw 10vh 3vw;
   }
   .home .pages-grid {
@@ -340,9 +336,8 @@ body {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
   .home {
-    width: 100vw;
     padding: 0 3vw 1vh 3vw;
   }
   .home .pages-grid {
@@ -397,7 +392,7 @@ body {
 }
 
 .about .site-div h2 {
-  background-color: rgba(35, 16, 58, 0.7);
+  background-color: #23103a;
   color: white;
   border-top: 15px solid white;
   text-align: center;
@@ -408,13 +403,13 @@ body {
   font-weight: normal;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .about {
     width: 85vw;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
   .about {
     width: 95vw;
     padding: 0 3vw 10vh 3vw;
@@ -422,13 +417,13 @@ body {
 }
 
 .about .side-nav {
-  background-color: #ff6c00;
   position: fixed;
+  background-color: #ff6c00;
   bottom: 33px;
   z-index: 50;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .about .side-nav {
     right: 0;
     bottom: 30%;
@@ -437,17 +432,16 @@ body {
 
 .about .side-nav ul {
   overflow: hidden;
-  background-color: #ff6c00;
   width: 100vw;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .about .side-nav ul {
     width: 15vw;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
   .about .side-nav ul {
     width: 13vw;
   }
@@ -458,7 +452,7 @@ body {
   line-height: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .about .side-nav ul li {
     float: none;
     display: block;
@@ -468,9 +462,8 @@ body {
 .about .side-nav ul li a {
   font-size: .85em;
   display: block;
-  border-radius: 5px;
   color: black;
-  padding: 8px 9px;
+  padding: 7px 9px;
   margin: 0 0 0 3px;
 }
 
@@ -481,7 +474,7 @@ body {
   transition: all .5s ease-in-out;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .about .side-nav ul li a {
     padding: 15px;
     float: right;
@@ -551,7 +544,7 @@ body {
           align-items: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .about .summary__grid {
     display: -ms-grid;
     display: grid;
@@ -594,7 +587,7 @@ body {
   background-color: rgba(255, 108, 0, 0.1);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .about .experience {
     width: 80vw;
   }
@@ -605,7 +598,7 @@ body {
   padding: 3vw;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .about .experience__grid {
     display: -ms-grid;
     display: grid;
@@ -623,13 +616,13 @@ body {
   padding: 2px 0 1vh 5vw;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .about .experience__grid--location p {
     padding-left: 2vw;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .about .experience__grid--location {
     border-bottom: none;
   }
@@ -639,7 +632,7 @@ body {
   padding-top: 8px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .about .experience__grid--details h4 {
     padding: 0 0 5px 0;
     border-bottom: 2px solid #282d4f;
@@ -654,7 +647,7 @@ body {
   list-style-type: circle;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .about .experience__grid--details ul {
     padding-top: 1vh;
   }
@@ -699,7 +692,7 @@ body {
   padding: 0 0 3px 5vw;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .about .abilities__skills {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -707,13 +700,13 @@ body {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
   .about .abilities__skills {
     grid-column-gap: 100px;
   }
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 28em) {
   .about .abilities__soft-skills {
     display: -ms-grid;
     display: grid;
@@ -722,7 +715,7 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .about .abilities__soft-skills {
     width: 80%;
     grid-column-gap: 60px;
@@ -744,7 +737,7 @@ body {
   padding: 3vw;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .about .education__grid {
     display: -ms-grid;
     display: grid;
@@ -758,13 +751,13 @@ body {
   border-bottom: 2px solid #282d4f;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .about .education__grid--location {
     border-bottom: none;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .about .education__grid--details {
     padding-bottom: 15px;
   }
@@ -774,7 +767,7 @@ body {
   padding-top: 8px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .about .education__grid--details h4 {
     padding: 0 0 5px 0;
     border-bottom: 2px solid #ff6c00;
@@ -795,7 +788,7 @@ body {
   margin: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .about .me-time {
     width: 80vw;
   }
@@ -818,7 +811,7 @@ body {
       grid-template-rows: 35vh 35vh 35vh 35vh;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 28em) {
   .about .me-time__activities {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -827,21 +820,21 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .about .me-time__activities {
     -ms-grid-rows: 250px 250px;
         grid-template-rows: 250px 250px;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
   .about .me-time__activities {
     -ms-grid-rows: 300px 300px;
         grid-template-rows: 300px 300px;
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 100em) {
   .about .me-time__activities {
     -ms-grid-rows: 350px 350px;
         grid-template-rows: 350px 350px;
@@ -880,13 +873,13 @@ body {
   padding-top: 2vh;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .photography {
     width: 85vw;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
   .photography {
     width: 95vw;
     padding: 0 3vw 10vh 3vw;
@@ -911,7 +904,7 @@ body {
   max-width: 25%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .photography .heading__image {
     display: block;
   }
@@ -925,7 +918,7 @@ body {
   font-size: 1.75em;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .photography .heading h1 {
     line-height: 140%;
     border-right: 10px solid white;
@@ -933,7 +926,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 100em) {
   .photography .heading h1 {
     padding-top: 7vh;
   }
@@ -963,28 +956,28 @@ body {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 28em) {
   .photography #photos, .photography .photography__kaden-ideas {
     -webkit-column-count: 1;
     column-count: 1;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .photography #photos, .photography .photography__kaden-ideas {
     -webkit-column-count: 2;
     column-count: 2;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
   .photography #photos {
     -webkit-column-count: 3;
     column-count: 3;
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 100em) {
   .photography #photos {
     -webkit-column-count: 4;
     column-count: 4;
@@ -1031,9 +1024,13 @@ body {
   cursor: pointer;
 }
 
+.photography__photos {
+  font-size: 1.5em;
+  background-color: #23103a;
+}
+
 .photography__kaden-ideas, .photography__photos {
-  background-color: rgba(35, 16, 58, 0.9);
-  margin: 0 auto;
+  margin: 1vh auto 0 auto;
 }
 
 .photography__kaden-ideas p, .photography__photos p {
@@ -1063,33 +1060,30 @@ body {
 }
 
 .photography__kaden-ideas--columns h3 {
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
-  color: #ff6c00;
-  border-bottom: 2px solid #ff6c00;
+  color: white;
+  background-color: #23103a;
   padding: 2vh 0 1vh 0;
+  font-size: .8em;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .photography__kaden-ideas--columns h3 {
-    padding: 3vh 0 1vh 0;
+    padding: 3vh 0;
   }
 }
 
 .photography__kaden-ideas--columns ul {
   padding: 1vh 2vw 1vh 5vw;
   min-height: 160px;
+  color: black;
+  background-color: rgba(40, 45, 79, 0.2);
 }
 
 .photography__kaden-ideas--columns ul li {
-  list-style-type: square;
-  line-height: 125%;
-  font-size: .7em;
-}
-
-.photography__photos {
-  font-size: 1.5em;
+  font-size: .65em;
 }
 
 a {
@@ -1101,6 +1095,7 @@ body {
   color: #fff;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: white;
+  padding: 0 0 20px 0;
 }
 
 .text-secondary {
@@ -1122,7 +1117,7 @@ footer {
   line-height: 200%;
   padding: 0 1.5rem;
   text-align: right;
-  font-size: .75em;
+  font-size: .7em;
 }
 
 footer .social-icon {

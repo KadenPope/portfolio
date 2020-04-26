@@ -20,6 +20,7 @@ $font-style: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 html {
     font-size: calc(1em + 1vw);
     line-height: 110%;
+    font-weight: normal;
 }
 
 img {
@@ -46,26 +47,26 @@ li {
 }
 
 @mixin media-sm {
-    @media screen and (min-width: 450px) {
+    @media screen and (min-width: 28em) {
         @content;
     }
 }
 
 @mixin media-md {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 48em) {
         @content;
     }
 }
 
 
 @mixin media-lg {
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 64em) {
         @content;
     }
 }
 
 @mixin media-xl {
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 100em) {
         @content;
     }
 }

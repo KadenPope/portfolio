@@ -157,9 +157,13 @@
 
     // ***************************  KADEN WHY PHOTOGRAPHY ****************************//
 
+    &__photos {
+        font-size: 1.5em;
+        background-color: $secondary-color;
+    }
+    
     &__kaden-ideas, &__photos {
-        background-color: rgba($secondary-color, 0.9);
-        margin: 0 auto;
+        margin: 1vh auto 0 auto;
         p {
             text-align: center;
             padding: 2vh;
@@ -185,29 +189,29 @@
         &--columns {
             border: solid 7px $light-text-color;
             h3 {
-                width: 70%;
+                width: 100%;
                 margin: 0 auto;
                 text-align: center;
-                color: $contrast-color;
-                border-bottom: 2px solid $contrast-color;
+                color: white;
+                background-color: $secondary-color;
                 padding: 2vh 0 1vh 0;
+                font-size: .8em;
+
                 @include media-md {
-                    padding: 3vh 0 1vh 0;
+                    padding: 3vh 0;
                 }
             }
+            
             ul {
                 padding: 1vh 2vw 1vh 5vw;
                 min-height: 160px;
+                color: $dark-text-color;
+                background-color: rgba($primary-color, .2);
+
                 li {
-                    list-style-type: square;
-                    line-height: 125%;
-                    font-size: .7em;
+                    font-size: .65em;
                 }
             }
         }
-    }
-
-    &__photos {
-        font-size: 1.5em;
     }
 }

@@ -28,7 +28,7 @@
 
     .site-div {
             h2 {
-                background-color: rgba($secondary-color, .7);
+                background-color: $secondary-color;
                 color: $light-text-color;
                 border-top: 15px solid white;
                 text-align: center;
@@ -50,8 +50,8 @@
     }
 
     .side-nav {
-        background-color: $contrast-color;
         position: fixed;
+        background-color: $contrast-color;
         bottom: 33px;
         z-index: 50;
         @include media-md {
@@ -60,7 +60,6 @@
         }
         ul {
             overflow: hidden;
-            background-color: $contrast-color;
             width: 100vw;
 
             @include media-md {
@@ -88,9 +87,8 @@
                     }
                     font-size: .85em;
                     display: block;
-                    border-radius: 5px;
                     color: $dark-text-color;
-                    padding: 8px 9px; 
+                    padding: 7px 9px; 
                     margin: 0 0 0 3px;
                     
                     @include media-md {
