@@ -1,9 +1,14 @@
 body {
     background-color: $light-text-color;
+    // min-height: 100px;
 }
 .home {
     width: 80vw;
     margin: 1rem auto;
+
+    h2 {
+        font-size: 1.15em;
+    }
 
     .pages-grid {
         display: grid;
@@ -18,27 +23,36 @@ body {
             "contact";
         position: relative;
         grid-gap: 10px;
+        padding: 0 0 70px 0;
 
         &__name {
 
             background-color: $primary-color;
             text-align: center;
-            padding-top: 2.5rem;
+            padding-top: .5rem;
             width: 100%;
 
             &--name {
-                font-size: 2.5rem;
+                font-size: 1.25em;
                 line-height: 120%;
-                padding-top: 1.75rem;
+                
+                @include media-sm {
+                    padding: 3em 1em 1em 1em;
+                }
+    
+                @include media-lg {
+                    padding: 4em 1em 1em 1em;
+                }
             }
 
             &--tagline {
-                font-size: 1.25rem;
+                font-size: .78em;
                 color: $contrast-color;
-                line-height: 200%;
-                padding: .5rem;
+                line-height: 150%;
+                font-weight: normal;
             }
             grid-area: name;
+            
         }
 
         &__about {
@@ -65,6 +79,7 @@ body {
             line-height: 140%;
             height: 25vh;
             width: 100%;
+            font-size: .7em;
         }
 
         &__link-text {
@@ -124,7 +139,6 @@ body {
 
             &__name--name {
                 padding: 1rem 10px;
-                font-size: 2.5rem;
             }
 
             &__contact {

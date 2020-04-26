@@ -3,15 +3,24 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+html {
+  font-size: calc(1em + 1vw);
 }
 
 img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 li {
   list-style-type: none;
+  line-height: 125%;
 }
 
 .menu-btn {
@@ -109,7 +118,7 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.5em;
+  font-size: .8em;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
@@ -157,9 +166,9 @@ li {
 
 .menu-nav__item__link {
   display: inline-block;
-  font-size: 2rem;
+  font-size: .9em;
   text-transform: uppercase;
-  padding-right: 2rem;
+  padding-right: 2em;
   font-weight: 300;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
@@ -203,6 +212,10 @@ body {
   margin: 1rem auto;
 }
 
+.home h2 {
+  font-size: 1.15em;
+}
+
 .home .pages-grid {
   display: -ms-grid;
   display: grid;
@@ -213,12 +226,13 @@ body {
       grid-template-areas: "name" "about" "projects" "photography" "design" "contact";
   position: relative;
   grid-gap: 10px;
+  padding: 0 0 70px 0;
 }
 
 .home .pages-grid__name {
   background-color: #282d4f;
   text-align: center;
-  padding-top: 2.5rem;
+  padding-top: .5rem;
   width: 100%;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -226,16 +240,27 @@ body {
 }
 
 .home .pages-grid__name--name {
-  font-size: 2.5rem;
+  font-size: 1.25em;
   line-height: 120%;
-  padding-top: 1.75rem;
+}
+
+@media screen and (min-width: 450px) {
+  .home .pages-grid__name--name {
+    padding: 3em 1em 1em 1em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home .pages-grid__name--name {
+    padding: 4em 1em 1em 1em;
+  }
 }
 
 .home .pages-grid__name--tagline {
-  font-size: 1.25rem;
+  font-size: .78em;
   color: #ff6c00;
-  line-height: 200%;
-  padding: .5rem;
+  line-height: 150%;
+  font-weight: normal;
 }
 
 .home .pages-grid__about {
@@ -272,6 +297,7 @@ body {
   line-height: 140%;
   height: 25vh;
   width: 100%;
+  font-size: .7em;
 }
 
 .home .pages-grid__link-text {
@@ -325,7 +351,6 @@ body {
   }
   .home .pages-grid__name--name {
     padding: 1rem 10px;
-    font-size: 2.5rem;
   }
   .home .pages-grid__contact {
     padding-top: 60%;
@@ -344,6 +369,24 @@ body {
       grid-template-columns: 1fr;
   color: black;
   position: relative;
+  line-height: 110%;
+}
+
+.about h3 {
+  font-size: .8em;
+  font-weight: 600;
+}
+
+.about h4 {
+  font-size: .8em;
+}
+
+.about li {
+  font-size: .7em;
+}
+
+.about p {
+  font-size: .75em;
 }
 
 .about .site-div h2 {
@@ -351,10 +394,11 @@ body {
   color: white;
   border-top: 15px solid white;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.3em;
   line-height: 300%;
   margin-bottom: 4vh;
   width: 100%;
+  font-weight: normal;
 }
 
 @media screen and (min-width: 768px) {
@@ -404,6 +448,7 @@ body {
 
 .about .side-nav ul li {
   float: left;
+  line-height: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -414,7 +459,7 @@ body {
 }
 
 .about .side-nav ul li a {
-  font-size: .95em;
+  font-size: .85em;
   display: block;
   border-radius: 5px;
   color: black;
@@ -430,7 +475,6 @@ body {
 
 @media screen and (min-width: 768px) {
   .about .side-nav ul li a {
-    font-size: 1.1em;
     padding: 15px;
     float: right;
     width: 100%;
@@ -449,18 +493,18 @@ body {
 
 .about .name__text {
   padding: 8vh 3vw;
-  background-color: rgba(35, 16, 58, 0.7);
+  background-color: rgba(35, 16, 58, 0.75);
 }
 
 .about .name__text--first-name {
-  font-size: 5rem;
+  font-size: 2.3em;
   font-weight: bold;
   color: white;
 }
 
 .about .name__text--tagline {
   color: #ff6c00;
-  font-size: 1.5rem;
+  font-weight: normal;
   padding-top: 4vh;
 }
 
@@ -510,7 +554,6 @@ body {
 }
 
 .about .summary__grid--text {
-  font-size: 1.15em;
   padding-bottom: 6vh;
 }
 
@@ -529,7 +572,6 @@ body {
 .about .summary__contact {
   text-align: center;
   line-height: 150%;
-  font-size: 1rem;
 }
 
 .about .summary__contact--email {
@@ -539,7 +581,7 @@ body {
 .about .experience {
   width: 80%;
   margin: 0 auto;
-  line-height: 120%;
+  line-height: 110%;
   padding-bottom: 40px;
   background-color: rgba(255, 108, 0, 0.1);
 }
@@ -567,11 +609,6 @@ body {
 
 .about .experience__grid--location {
   border-bottom: 2px solid #282d4f;
-}
-
-.about .experience__grid--location h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
 }
 
 .about .experience__grid--location p {
@@ -622,7 +659,6 @@ body {
 }
 
 .about .abilities__heading {
-  font-size: 1.5rem;
   width: 80%;
   padding: 7px 0 1vh 1vw;
   margin: 1.5vh auto;
@@ -645,7 +681,6 @@ body {
   font-weight: bold;
   padding: 20px 0px 5px 5px;
   border-bottom: solid #ff6c00 2px;
-  font-size: 1.5rem;
 }
 
 .about .abilities__skills li:first-of-type {
@@ -694,14 +729,7 @@ body {
   width: 80vw;
   background-color: rgba(255, 108, 0, 0.1);
   margin: 0 auto;
-  line-height: 120%;
   padding-bottom: 4.5vh;
-}
-
-@media screen and (min-width: 768px) {
-  .about .education {
-    width: 80vw;
-  }
 }
 
 .about .education__grid {
@@ -719,13 +747,7 @@ body {
 }
 
 .about .education__grid--location {
-  margin-top: 4vh;
   border-bottom: 2px solid #282d4f;
-}
-
-.about .education__grid--location h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
 }
 
 @media screen and (min-width: 768px) {
@@ -892,12 +914,11 @@ body {
   color: white;
   text-align: center;
   padding: 50px 10px;
-  font-size: 2em;
+  font-size: 1.75em;
 }
 
 @media screen and (min-width: 768px) {
   .photography .heading h1 {
-    font-size: 2em;
     padding: none;
     line-height: 150%;
     border-right: 10px solid white;
@@ -905,15 +926,8 @@ body {
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .photography .heading h1 {
-    font-size: 3em;
-  }
-}
-
 @media screen and (min-width: 1600px) {
   .photography .heading h1 {
-    font-size: 5em;
     padding-top: 7vh;
   }
 }
@@ -1018,26 +1032,14 @@ body {
 .photography__kaden-ideas p, .photography__photos p {
   text-align: center;
   padding: 2vh;
-  font-size: 1rem;
+  font-size: .6em;
 }
 
 .photography__kaden-ideas h2, .photography__photos h2 {
   color: #ff6c00;
   text-align: center;
   padding: 0 0 2vh 0;
-  font-size: 1.5rem;
-}
-
-@media screen and (min-width: 768px) {
-  .photography__kaden-ideas h2, .photography__photos h2 {
-    font-size: 2rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .photography__kaden-ideas h2, .photography__photos h2 {
-    font-size: 2.5rem;
-  }
+  font-size: .8em;
 }
 
 .photography__kaden-ideas {
@@ -1089,10 +1091,6 @@ body {
   font-size: 2em;
 }
 
-h1, h2, h3 {
-  font-weight: 400;
-}
-
 a {
   text-decoration: none;
   color: #fff;
@@ -1113,7 +1111,6 @@ header {
   position: fixed;
   z-index: 100;
   width: 100%;
-  padding: 1rem;
 }
 
 footer {
@@ -1122,9 +1119,10 @@ footer {
   bottom: 0;
   color: #fff;
   width: 100vw;
-  line-height: 350%;
+  line-height: 275%;
   padding: 0 1.5rem;
   text-align: right;
+  font-size: .75em;
 }
 
 footer .social-icon {

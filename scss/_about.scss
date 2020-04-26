@@ -5,6 +5,26 @@
     grid-template-columns: 1fr;
     color: $dark-text-color;
     position: relative;
+    line-height: 110%;
+
+    h3 {
+        font-size: .8em;
+        font-weight: 600;
+    }
+
+    h4 {
+        font-size: .8em;
+    }
+
+    li {
+        font-size: .7em;
+    }
+
+    p {
+        font-size: .75em;
+    }
+
+
 
     .site-div {
             h2 {
@@ -12,10 +32,11 @@
                 color: $light-text-color;
                 border-top: 15px solid white;
                 text-align: center;
-                font-size: 1.5rem;
+                font-size: 1.3em;
                 line-height: 300%;
                 margin-bottom: 4vh;
                 width: 100%;
+                font-weight: normal;
             }
     }
 
@@ -52,6 +73,8 @@
             
             li {
                 float: left;
+                line-height: 100%;
+
                 @include media-md {
                     float: none;
                     display: block;
@@ -62,7 +85,7 @@
                         background-color: rgba($accent-color, .5);
                         @include transition-ease;
                     }
-                    font-size: .95em;
+                    font-size: .85em;
                     display: block;
                     border-radius: 5px;
                     color: $dark-text-color;
@@ -70,7 +93,6 @@
                     margin: 0 0 0 3px;
                     
                     @include media-md {
-                        font-size: 1.1em;
                         padding: 15px;
                         float: right;
                         width: 100%;
@@ -90,17 +112,17 @@
 
         &__text {
             padding: 8vh 3vw;
-            background-color: rgba($secondary-color, .7);
+            background-color: rgba($secondary-color, .75);
     
             &--first-name {
-                font-size: 5rem;
+                font-size: 2.3em;
                 font-weight: bold;
                 color: $light-text-color;
             }
     
             &--tagline {
                 color: $contrast-color;
-                font-size: 1.5rem;
+                font-weight: normal;
                 padding-top: 4vh;
             }
         }
@@ -139,7 +161,6 @@
             }
 
             &--text {
-                font-size: 1.15em;
                 padding-bottom: 6vh;
             }
     
@@ -159,7 +180,6 @@
         &__contact {
             text-align: center;
             line-height: 150%;
-            font-size: 1rem;
 
             &--email {
                 color: set-text-color(rgba($contrast-color, .2));
@@ -170,7 +190,7 @@
     .experience {
         width: 80%;
         margin: 0 auto;
-        line-height: 120%;
+        line-height: 110%;
         padding-bottom: 40px;
         background-color: rgba($contrast-color, .1);
 
@@ -188,10 +208,6 @@
             }
 
             &--location {
-                h3 {
-                    font-size: 1.25rem;
-                    font-weight: 600;
-                }
                 p {
                     padding: 2px 0 1vh 5vw;
                     @include media-md {
@@ -231,7 +247,6 @@
         background-color: rgba($primary-color, .2);
 
         &__heading {
-            font-size: 1.5rem;
             width: 80%;
             padding: 7px 0 1vh 1vw;
             margin: 1.5vh auto;
@@ -251,7 +266,6 @@
                 font-weight: bold;
                 padding: 20px 0px 5px 5px;
                 border-bottom: solid $contrast-color 2px;
-                font-size: 1.5rem;
             }
             li:first-of-type {
                 padding-top: 2vh;
@@ -269,6 +283,7 @@
                 grid-column-gap: 100px;
             }
         }
+
         &__soft-skills {
             @include media-sm {
                 display: grid;
@@ -290,12 +305,7 @@
         width: 80vw;
         background-color: rgba($contrast-color, .1);
         margin: 0 auto;
-        line-height: 120%;
         padding-bottom: 4.5vh;
-
-        @include media-md {
-            width: 80vw;
-        }
 
         &__grid {
             padding: 3vw;
@@ -306,12 +316,8 @@
             }
     
             &--location {
-                h3 {
-                    font-size: 1.25rem;
-                    font-weight: 600;
-                }
-                margin-top: 4vh;
                 border-bottom: 2px solid $primary-color;
+
                 @include media-md {
                     border-bottom: none;
                 }
@@ -324,6 +330,7 @@
 
                 h4 {
                     padding-top: 8px;
+                    
                     @include media-md {
                         padding: 0 0 5px 0;
                         border-bottom: 2px solid $contrast-color;
@@ -352,6 +359,7 @@
         &__title {
             margin-bottom: 10px;
         }
+
         &__activities {
             width: 90%;
             margin: auto;
@@ -396,4 +404,4 @@
             }
         }
     }
-};
+}

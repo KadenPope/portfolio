@@ -40,22 +40,16 @@
             color: $light-text-color;
             text-align: center;
             padding: 50px 10px;
-            font-size: 2em;
+            font-size: 1.75em;
 
             @include media-md {
-                font-size: 2em;
                 padding: none;
                 line-height: 150%;
                 border-right: 10px solid $light-text-color;
                 border-left: 10px solid $light-text-color;
             }
 
-            @include media-lg {
-                font-size: 3em;
-            }
-
             @include media-xl {
-                font-size: 5em;
                 padding-top: 7vh;
             }
         }
@@ -171,21 +165,13 @@
         p {
             text-align: center;
             padding: 2vh;
-            font-size: 1rem;
+            font-size: .6em;
         }
         h2 {
             color: $contrast-color;
             text-align: center;
             padding: 0 0 2vh 0;
-            font-size: 1.5rem;
-
-            @include media-md {
-                font-size: 2rem;
-            }
-
-            @include media-lg {
-                font-size: 2.5rem;
-            }
+            font-size: .8em;
         }
     }
 
