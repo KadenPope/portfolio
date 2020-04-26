@@ -25,16 +25,25 @@ li {
   line-height: 125%;
 }
 
+/************************************  NAV HAMBURGER ***********************************/
 .menu-btn {
   position: absolute;
   z-index: 1;
   left: .5rem;
-  top: 1rem;
+  top: 2em;
   height: 20px;
   width: 28px;
   cursor: pointer;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+}
+
+@media screen and (min-width: 48em) {
+  .menu-btn {
+    display: none;
+    -webkit-transition: none;
+    transition: none;
+  }
 }
 
 .menu-btn__burger {
@@ -43,7 +52,7 @@ li {
   top: .5rem;
   width: 28px;
   height: 3px;
-  background-color: #a0204c;
+  background-color: #ff852d;
 }
 
 .menu-btn__burger::before {
@@ -52,7 +61,7 @@ li {
   top: -8px;
   width: 28px;
   height: 3px;
-  background-color: #a0204c;
+  background-color: #ff852d;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
@@ -63,7 +72,7 @@ li {
   top: 8px;
   width: 20px;
   height: 3px;
-  background-color: #a0204c;
+  background-color: #ff852d;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
@@ -85,6 +94,7 @@ li {
           transform: rotate(-45deg) translate(3px, -7px);
 }
 
+/*********************************** NAVBAR **********************************/
 .nav {
   position: fixed;
   top: 0;
@@ -94,25 +104,19 @@ li {
   visibility: hidden;
 }
 
+@media screen and (min-width: 48em) {
+  .nav {
+    visibility: visible;
+  }
+}
+
 .nav.open {
   visibility: visible;
 }
 
 @media screen and (min-width: 48em) {
   .nav {
-    width: 30vw;
-  }
-}
-
-@media screen and (min-width: 64em) {
-  .nav {
-    width: 20vw;
-  }
-}
-
-@media screen and (min-width: 100em) {
-  .nav {
-    width: 15vw;
+    width: 100vw;
   }
 }
 
@@ -130,19 +134,31 @@ li {
       -ms-flex-align: left;
           align-items: left;
   height: 100vh;
-  overflow: hidden;
-  background: #23103a;
+  background: #a0204c;
   list-style-type: none;
   padding-right: 1rem;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
 }
 
 .menu-nav.open {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+@media screen and (min-width: 48em) {
+  .menu-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    min-height: 55px;
+    height: 7vh;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 0;
+  }
 }
 
 .menu-nav__item {
@@ -152,18 +168,33 @@ li {
   transition: all .5s ease-in-out;
 }
 
+@media screen and (min-width: 48em) {
+  .menu-nav__item {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
 .menu-nav__item.open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
 .menu-nav__item a {
-  margin-left: 1.5rem;
   line-height: 300%;
+  margin: 0 0 0 5vw;
+}
+
+@media screen and (min-width: 48em) {
+  .menu-nav__item a {
+    font-size: .8em;
+    line-height: 300%;
+    padding: 15px 10px 5px 10px;
+  }
 }
 
 .menu-nav__item.active > a {
-  color: #ff6c00;
+  border-bottom: 3px solid white;
 }
 
 .menu-nav__item__link {
@@ -206,8 +237,13 @@ li {
 }
 
 .home {
-  width: 95vw;
-  margin: 1em auto;
+  width: 100vw;
+}
+
+@media screen and (min-width: 48em) {
+  .home {
+    margin: 10vh auto 0vh auto;
+  }
 }
 
 .home h2 {
@@ -225,7 +261,6 @@ li {
       grid-template-areas: "name" "about" "projects" "photography" "design" "contact";
   position: relative;
   grid-gap: 10px;
-  padding: 0 0 70px 0;
 }
 
 .home .pages-grid__name {
@@ -257,7 +292,7 @@ li {
 
 .home .pages-grid__name--tagline {
   font-size: .78em;
-  color: #ff6c00;
+  color: #ff852d;
   line-height: 150%;
   font-weight: normal;
 }
@@ -300,7 +335,7 @@ li {
 }
 
 .home .pages-grid__contact a {
-  color: #ff6c00;
+  color: #ff852d;
 }
 
 .home .pages-grid__link-text {
@@ -319,7 +354,7 @@ li {
 
 @media screen and (min-width: 48em) {
   .home {
-    padding: 0 3vw 10vh 3vw;
+    padding: 0 3vw 30vh 3vw;
   }
   .home .pages-grid {
     width: 100%;
@@ -338,7 +373,7 @@ li {
 
 @media screen and (min-width: 64em) {
   .home {
-    padding: 0 3vw 1vh 3vw;
+    padding: 0 3vw 10vh 3vw;
   }
   .home .pages-grid {
     width: 100%;
@@ -364,7 +399,6 @@ li {
 
 .about {
   width: 100vw;
-  margin: 0 auto 9vh auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -375,12 +409,12 @@ li {
 }
 
 .about h3 {
-  font-size: .8em;
+  font-size: .75em;
   font-weight: 600;
 }
 
 .about h4 {
-  font-size: .8em;
+  font-size: .75em;
 }
 
 .about li {
@@ -406,6 +440,7 @@ li {
 @media screen and (min-width: 48em) {
   .about {
     width: 85vw;
+    margin: 10vh auto 9vh auto;
   }
 }
 
@@ -418,7 +453,7 @@ li {
 
 .about .side-nav {
   position: fixed;
-  background-color: #ff6c00;
+  background-color: #ff852d;
   bottom: 33px;
   z-index: 50;
 }
@@ -436,12 +471,6 @@ li {
 }
 
 @media screen and (min-width: 48em) {
-  .about .side-nav ul {
-    width: 15vw;
-  }
-}
-
-@media screen and (min-width: 64em) {
   .about .side-nav ul {
     width: 13vw;
   }
@@ -504,13 +533,13 @@ li {
 }
 
 .about .name__text--tagline {
-  color: #ff6c00;
+  color: #ff852d;
   font-weight: normal;
   padding-top: 4vh;
 }
 
 .about .name__scroll-down {
-  color: #ff6c00;
+  color: #ff852d;
   position: absolute;
   top: 60%;
   left: 50%;
@@ -531,7 +560,7 @@ li {
   width: 80vw;
   margin: 0 auto;
   padding: 0 0 5vh 0;
-  background-color: rgba(40, 45, 79, 0.2);
+  background-color: rgba(40, 45, 79, 0.1);
 }
 
 .about .summary__grid {
@@ -584,7 +613,7 @@ li {
   margin: 0 auto;
   line-height: 110%;
   padding-bottom: 40px;
-  background-color: rgba(255, 108, 0, 0.1);
+  background-color: rgba(255, 133, 45, 0.1);
 }
 
 @media screen and (min-width: 48em) {
@@ -656,7 +685,7 @@ li {
 .about .abilities {
   width: 80vw;
   margin: 0 auto;
-  background-color: rgba(40, 45, 79, 0.2);
+  background-color: rgba(40, 45, 79, 0.1);
 }
 
 .about .abilities__heading {
@@ -664,7 +693,7 @@ li {
   padding: 7px 0 1vh 1vw;
   margin: 1.5vh auto;
   font-weight: bolder;
-  border-bottom: 2px solid #ff6c00;
+  border-bottom: 2px solid #ff852d;
 }
 
 .about .abilities__skills {
@@ -681,7 +710,7 @@ li {
   color: black;
   font-weight: bold;
   padding: 20px 0px 5px 5px;
-  border-bottom: solid #ff6c00 2px;
+  border-bottom: solid #ff852d 2px;
 }
 
 .about .abilities__skills li:first-of-type {
@@ -728,7 +757,7 @@ li {
 
 .about .education {
   width: 80vw;
-  background-color: rgba(255, 108, 0, 0.1);
+  background-color: rgba(255, 133, 45, 0.1);
   margin: 0 auto;
   padding-bottom: 4.5vh;
 }
@@ -770,7 +799,7 @@ li {
 @media screen and (min-width: 48em) {
   .about .education__grid--details h4 {
     padding: 0 0 5px 0;
-    border-bottom: 2px solid #ff6c00;
+    border-bottom: 2px solid #ff852d;
   }
 }
 
@@ -786,6 +815,7 @@ li {
   padding: 0 0 7vh 0;
   width: 75vw;
   margin: auto;
+  background-color: rgba(40, 45, 79, 0.1);
 }
 
 @media screen and (min-width: 48em) {
@@ -1040,7 +1070,7 @@ li {
 }
 
 .photography__kaden-ideas h2, .photography__photos h2 {
-  color: #ff6c00;
+  color: #ff852d;
   text-align: center;
   padding: 0 0 2vh 0;
   font-size: .8em;
@@ -1095,11 +1125,10 @@ body {
   color: #fff;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: white;
-  padding: 0 0 20px 0;
 }
 
 .text-secondary {
-  color: #ff6c00;
+  color: #ff852d;
 }
 
 header {
@@ -1136,6 +1165,6 @@ footer .social-icons a {
 }
 
 footer .social-icons a:hover {
-  color: #ff6c00;
+  color: #ff852d;
 }
 /*# sourceMappingURL=main.css.map */

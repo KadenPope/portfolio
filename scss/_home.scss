@@ -1,6 +1,9 @@
 .home {
-    width: 95vw;
-    margin: 1em auto;
+    width: 100vw;
+
+    @include media-md {
+        margin: 10vh auto 0vh auto;
+    }
 
     h2 {
         font-size: 1em;
@@ -20,7 +23,7 @@
             "contact";
         position: relative;
         grid-gap: 10px;
-        padding: 0 0 70px 0;
+        // padding: 0 0 100vh 0;
 
         &__name {
 
@@ -101,7 +104,7 @@
 
 @include media-md {
     .home {
-        padding: 0 3vw 10vh 3vw;
+        padding: 0 3vw 30vh 3vw;
 
         .pages-grid {
             width: 100%;
@@ -124,7 +127,7 @@
 
 @include media-lg {
     .home {
-        padding: 0 3vw 1vh 3vw;
+        padding: 0 3vw 10vh 3vw;
 
         .pages-grid {
             width: 100%;

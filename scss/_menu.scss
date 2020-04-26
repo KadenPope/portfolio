@@ -1,12 +1,21 @@
+
+
+/************************************  NAV HAMBURGER ***********************************/
+
 .menu-btn {
     position: absolute;
     z-index: 1;
     left: .5rem;
-    top: 1rem;
+    top: 2em;
     height: 20px;
     width: 28px;
     cursor: pointer;
     @include transition-ease;
+
+    @include media-md {
+        display: none;
+        transition: none;
+    }
 
     &__burger {
         position: absolute;
@@ -14,7 +23,7 @@
         top: .5rem;
         width: 28px;
         height: 3px;
-        background-color: $accent-color;
+        background-color: $contrast-color;
 
         &::before {
             content: '';
@@ -22,7 +31,7 @@
             top: -8px;
             width: 28px;
             height: 3px;
-            background-color: $accent-color;
+            background-color: $contrast-color;
             @include transition-ease;
         }
 
@@ -32,7 +41,7 @@
             top: 8px;
             width: 20px;
             height: 3px;
-            background-color: $accent-color;
+            background-color: $contrast-color;
             @include transition-ease;
         }
 
@@ -52,6 +61,8 @@
     }
 }
 
+/*********************************** NAVBAR **********************************/
+
 .nav {
     position: fixed;
     top: 0;
@@ -60,6 +71,10 @@
     opacity: 0.98;
     visibility: hidden;
 
+    @include media-md {
+        visibility: visible;
+    }
+
     &.open {
         visibility: visible;
     }
@@ -67,21 +82,10 @@
 
 @include media-md {
     .nav {
-        width: 30vw;
+        width: 100vw;
     }
 }
 
-@include media-lg {
-    .nav {
-        width: 20vw;
-    }
-}
-
-@include media-xl {
-    .nav {
-        width: 15vw;
-    }
-}
 
 .menu-nav {
     display: flex;
@@ -90,33 +94,48 @@
     padding-top: 10vh;
     align-items: left;
     height: 100vh;
-    overflow: hidden;
-    background: $secondary-color;
+    background: $accent-color;
     list-style-type: none;
     padding-right: 1rem;
-    transform: translateY(-100%);
-    @include transition-ease;
 
     &.open {
         transform: translateY(0);
+    }
+
+    @include media-md {
+        display: flex;
+        flex-direction: row;
+        min-height: 55px;
+        height: 7vh;
+        justify-content: space-around;
+        padding: 0;
     }
 
     &__item {
         transform: translateX(100vw);
         @include transition-ease;
 
+        @include media-md {
+            transform: none;
+        }
+
         &.open {
             transform: translateX(0);
         }
 
         a {
-            margin-left: 1.5rem;
-            line-height: 300%;
+           line-height: 300%;
+           margin: 0 0 0 5vw;
+
+            @include media-md {
+                font-size: .8em;
+                line-height: 300%;
+                padding: 15px 10px 5px 10px;
+            }
         }
 
-
         &.active > a {
-            color: $contrast-color;
+            border-bottom: 3px solid $light-text-color;
         }
 
         &__link {
