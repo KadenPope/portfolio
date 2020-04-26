@@ -52,7 +52,7 @@
     .side-nav {
         background-color: $contrast-color;
         position: fixed;
-        bottom: 45px;
+        bottom: 33px;
         z-index: 50;
         @include media-md {
             right: 0;
@@ -82,7 +82,8 @@
 
                 a {
                     &:hover {
-                        background-color: rgba($accent-color, .5);
+                        background-color: rgba($accent-color, .7);
+                        color: white;
                         @include transition-ease;
                     }
                     font-size: .85em;
