@@ -6,7 +6,7 @@
     position: absolute;
     z-index: 1;
     left: .5rem;
-    top: 2em;
+    top: 1em;
     height: 20px;
     width: 28px;
     cursor: pointer;
@@ -114,22 +114,27 @@
     &__item {
         transform: translateX(100vw);
         @include transition-ease;
+        padding: 10px 0 0 20px;
 
         @include media-md {
             transform: none;
+            padding: 3px 10px 4px 10px;
         }
 
         &.open {
             transform: translateX(0);
         }
 
+        &:hover {
+            background-color: $primary-color;
+        }
+
         a {
-           line-height: 300%;
-           margin: 0 0 0 5vw;
+           line-height: 260%;
 
             @include media-md {
                 font-size: .8em;
-                line-height: 300%;
+                line-height: 200%;
                 padding: 15px 10px 5px 10px;
             }
         }

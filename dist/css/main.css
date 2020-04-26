@@ -30,7 +30,7 @@ li {
   position: absolute;
   z-index: 1;
   left: .5rem;
-  top: 2em;
+  top: 1em;
   height: 20px;
   width: 28px;
   cursor: pointer;
@@ -166,12 +166,14 @@ li {
           transform: translateX(100vw);
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+  padding: 10px 0 0 20px;
 }
 
 @media screen and (min-width: 48em) {
   .menu-nav__item {
     -webkit-transform: none;
             transform: none;
+    padding: 3px 10px 4px 10px;
   }
 }
 
@@ -180,15 +182,18 @@ li {
           transform: translateX(0);
 }
 
+.menu-nav__item:hover {
+  background-color: #282d4f;
+}
+
 .menu-nav__item a {
-  line-height: 300%;
-  margin: 0 0 0 5vw;
+  line-height: 260%;
 }
 
 @media screen and (min-width: 48em) {
   .menu-nav__item a {
     font-size: .8em;
-    line-height: 300%;
+    line-height: 200%;
     padding: 15px 10px 5px 10px;
   }
 }
@@ -417,11 +422,7 @@ li {
   font-size: .75em;
 }
 
-.about li {
-  font-size: .65em;
-}
-
-.about p {
+.about p, .about dd, .about li, .about dt {
   font-size: .65em;
 }
 
@@ -432,7 +433,7 @@ li {
   text-align: center;
   font-size: 1.3em;
   line-height: 300%;
-  margin-bottom: 4vh;
+  margin: 4vh 0;
   width: 100%;
   font-weight: normal;
 }
@@ -497,7 +498,7 @@ li {
 }
 
 .about .side-nav ul li a:hover {
-  background-color: rgba(160, 32, 76, 0.7);
+  background-color: #a0204c;
   color: white;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
@@ -694,6 +695,7 @@ li {
   margin: 1.5vh auto;
   font-weight: bolder;
   border-bottom: 2px solid #ff852d;
+  font-size: .85em;
 }
 
 .about .abilities__skills {
@@ -713,46 +715,60 @@ li {
   border-bottom: solid #ff852d 2px;
 }
 
-.about .abilities__skills li:first-of-type {
-  padding-top: 2vh;
-}
-
-.about .abilities__skills li {
-  padding: 0 0 3px 5vw;
-}
-
 @media screen and (min-width: 48em) {
-  .about .abilities__skills {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    grid-column-gap: 45px;
-  }
-}
-
-@media screen and (min-width: 64em) {
-  .about .abilities__skills {
-    grid-column-gap: 100px;
-  }
-}
-
-@media screen and (min-width: 28em) {
-  .about .abilities__soft-skills {
+  .about .abilities__skills dl {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 3.5fr;
+        grid-template-columns: 1fr 3.5fr;
   }
+}
+
+.about .abilities__skills dt {
+  font-weight: 600;
+}
+
+.about .abilities__skills dd {
+  margin: 0 0 3.5vh 0;
+}
+
+.about .abilities__skills dd a {
+  color: #a0204c;
+}
+
+.about .abilities__soft-skills {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-column-gap: 10px;
+  width: 80%;
+  margin: auto;
+}
+
+.about .abilities__soft-skills h3 {
+  color: black;
+  font-weight: bold;
+  padding: 20px 0px 5px 5px;
+  border-bottom: solid #ff852d 2px;
+  font-size: .85em;
 }
 
 @media screen and (min-width: 48em) {
-  .about .abilities__soft-skills {
-    width: 80%;
-    grid-column-gap: 60px;
+  .about .abilities__soft-skills dl {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 3.5fr;
+        grid-template-columns: 1fr 3.5fr;
   }
 }
 
-.about .abilities__soft-skills li {
-  padding: 0 0 6px 12vw;
+.about .abilities__soft-skills dt {
+  font-weight: 600;
+}
+
+.about .abilities__soft-skills dd {
+  margin: 0 0 3.5vh 0;
 }
 
 .about .education {

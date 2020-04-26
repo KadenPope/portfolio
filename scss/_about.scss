@@ -1,6 +1,5 @@
 .about {
     width: 100vw;
-    // margin: 10vh auto 9vh auto;
     display: grid;
     grid-template-columns: 1fr;
     color: $dark-text-color;
@@ -16,15 +15,9 @@
         font-size: .75em;
     }
 
-    li {
+    p, dd, li, dt {
         font-size: .65em;
     }
-
-    p {
-        font-size: .65em;
-    }
-
-
 
     .site-div {
             h2 {
@@ -34,7 +27,7 @@
                 text-align: center;
                 font-size: 1.3em;
                 line-height: 300%;
-                margin-bottom: 4vh;
+                margin: 4vh 0;
                 width: 100%;
                 font-weight: normal;
             }
@@ -80,7 +73,7 @@
 
                 a {
                     &:hover {
-                        background-color: rgba($accent-color, .7);
+                        background-color: $accent-color;
                         color: white;
                         @include transition-ease;
                     }
@@ -250,6 +243,7 @@
             margin: 1.5vh auto;
             font-weight: bolder;
             border-bottom: 2px solid $contrast-color;
+            font-size: .85em;
         }
 
         &__skills {
@@ -265,36 +259,56 @@
                 padding: 20px 0px 5px 5px;
                 border-bottom: solid $contrast-color 2px;
             }
-            li:first-of-type {
-                padding-top: 2vh;
-            }
-            li {
-                padding: 0 0 3px 5vw;
-            }
 
             @include media-md {
-                grid-template-columns: 1fr 1fr;
-                grid-column-gap: 45px;
+                dl {
+                    display: grid;
+                    grid-template-columns: 1fr 3.5fr;
+                }
             }
 
-            @include media-lg {
-                grid-column-gap: 100px;
+            dt {
+                font-weight: 600;
+            }
+
+            dd {
+                margin: 0 0 3.5vh 0;
+
+                a {
+                    color: $accent-color;
+                }
             }
         }
 
         &__soft-skills {
-            @include media-sm {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
+            
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-column-gap: 10px;
+            width: 80%;
+            margin: auto;
+
+            h3 {
+                color: black;
+                font-weight: bold;
+                padding: 20px 0px 5px 5px;
+                border-bottom: solid $contrast-color 2px;
+                font-size: .85em;
             }
 
             @include media-md {
-                width: 80%;
-                grid-column-gap: 60px;
+                dl {
+                    display: grid;
+                    grid-template-columns: 1fr 3.5fr;
+                }
             }
 
-            li {
-                padding: 0 0 6px 12vw;
+            dt {
+                font-weight: 600;
+            }
+
+            dd {
+                margin: 0 0 3.5vh 0;
             }
         }
     }
