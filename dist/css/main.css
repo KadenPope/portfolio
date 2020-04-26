@@ -346,15 +346,26 @@ body {
   position: relative;
 }
 
+.about .site-div h2 {
+  background-color: rgba(35, 16, 58, 0.7);
+  color: white;
+  border-top: 15px solid white;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 300%;
+  margin-bottom: 4vh;
+  width: 100%;
+}
+
 @media screen and (min-width: 768px) {
   .about {
-    width: 90vw;
+    width: 85vw;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .about {
-    width: 100vw;
+    width: 95vw;
     padding: 0 3vw 10vh 3vw;
   }
 }
@@ -474,14 +485,8 @@ body {
 .about .summary {
   width: 80vw;
   margin: 0 auto;
-  padding: 5vh 6vw;
+  padding: 0 0 5vh 0;
   background-color: rgba(40, 45, 79, 0.2);
-}
-
-.about .summary__title {
-  text-align: center;
-  font-size: 1.5rem;
-  padding-bottom: 6vh;
 }
 
 .about .summary__grid {
@@ -532,22 +537,22 @@ body {
 }
 
 .about .experience {
-  width: 75vw;
+  width: 80%;
   margin: 0 auto;
   line-height: 120%;
   padding-bottom: 40px;
+  background-color: rgba(255, 108, 0, 0.1);
 }
 
 @media screen and (min-width: 768px) {
   .about .experience {
-    width: 66vw;
+    width: 80vw;
   }
 }
 
-.about .experience__title {
-  padding: 5vh 5vw;
-  text-align: center;
-  font-size: 2.5rem;
+.about .experience__grid {
+  margin: 0 auto;
+  padding: 3vw;
 }
 
 @media screen and (min-width: 768px) {
@@ -561,7 +566,7 @@ body {
 }
 
 .about .experience__grid--location {
-  border-bottom: 2px solid #ff6c00;
+  border-bottom: 2px solid #282d4f;
 }
 
 .about .experience__grid--location h3 {
@@ -592,12 +597,12 @@ body {
 @media screen and (min-width: 768px) {
   .about .experience__grid--details h4 {
     padding: 0 0 5px 0;
-    border-bottom: 2px solid #ff6c00;
+    border-bottom: 2px solid #282d4f;
   }
 }
 
 .about .experience__grid--details ul {
-  padding: 0 0 8vh 5vw;
+  padding: 0 0 3vh 5vw;
 }
 
 .about .experience__grid--details ul li {
@@ -611,16 +616,9 @@ body {
 }
 
 .about .abilities {
-  padding: 4vh 0;
   width: 80vw;
   margin: 0 auto;
   background-color: rgba(40, 45, 79, 0.2);
-}
-
-.about .abilities__title {
-  text-align: center;
-  font-size: 2rem;
-  padding-bottom: 4vh;
 }
 
 .about .abilities__heading {
@@ -638,8 +636,24 @@ body {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   grid-column-gap: 10px;
-  width: 70%;
+  width: 80%;
   margin: auto;
+}
+
+.about .abilities__skills h3 {
+  color: black;
+  font-weight: bold;
+  padding: 20px 0px 5px 5px;
+  border-bottom: solid #ff6c00 2px;
+  font-size: 1.5rem;
+}
+
+.about .abilities__skills li:first-of-type {
+  padding-top: 2vh;
+}
+
+.about .abilities__skills li {
+  padding: 0 0 3px 5vw;
 }
 
 @media screen and (min-width: 768px) {
@@ -654,24 +668,6 @@ body {
   .about .abilities__skills {
     grid-column-gap: 100px;
   }
-}
-
-.about .abilities__skills .checked {
-  color: #a0204c;
-}
-
-.about .abilities__skills .unchecked {
-  color: rgba(40, 45, 79, 0.6);
-}
-
-.about .abilities__skills dt {
-  float: left;
-  clear: both;
-  padding-bottom: 6px;
-}
-
-.about .abilities__skills dd {
-  float: right;
 }
 
 @media screen and (min-width: 450px) {
@@ -695,7 +691,8 @@ body {
 }
 
 .about .education {
-  width: 75vw;
+  width: 80vw;
+  background-color: rgba(255, 108, 0, 0.1);
   margin: 0 auto;
   line-height: 120%;
   padding-bottom: 4.5vh;
@@ -703,8 +700,12 @@ body {
 
 @media screen and (min-width: 768px) {
   .about .education {
-    width: 66vw;
+    width: 80vw;
   }
+}
+
+.about .education__grid {
+  padding: 3vw;
 }
 
 @media screen and (min-width: 768px) {
@@ -717,15 +718,9 @@ body {
   }
 }
 
-.about .education__grid--title {
-  padding: 5vh 5vw;
-  text-align: center;
-  font-size: 2.5rem;
-}
-
 .about .education__grid--location {
   margin-top: 4vh;
-  border-bottom: 2px solid #ff6c00;
+  border-bottom: 2px solid #282d4f;
 }
 
 .about .education__grid--location h3 {
@@ -765,7 +760,6 @@ body {
 }
 
 .about .me-time {
-  background-color: rgba(40, 45, 79, 0.2);
   padding: 0 0 7vh 0;
   width: 75vw;
   margin: auto;
@@ -778,9 +772,7 @@ body {
 }
 
 .about .me-time__title {
-  padding: 4vh 5vw 4vh 5vw;
-  text-align: center;
-  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 .about .me-time__activities {
@@ -802,7 +794,6 @@ body {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 175px 175px;
         grid-template-rows: 175px 175px;
-    padding-bottom: 5vh;
   }
 }
 
@@ -850,17 +841,23 @@ body {
   margin: 0 auto;
   width: 80vw;
   padding-bottom: 10vh;
+  /*********************************COLUMN RESPONSIVE FORMATTING************************/
+}
+
+.photography__photos {
+  border: 5px solid white;
+  padding-top: 2vh;
 }
 
 @media screen and (min-width: 768px) {
   .photography {
-    width: 90vw;
+    width: 85vw;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .photography {
-    width: 100vw;
+    width: 95vw;
     padding: 0 3vw 10vh 3vw;
   }
 }
@@ -874,8 +871,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 0 7px;
-  border-bottom: 10px solid white;
+  border: 5px solid white;
+  border-bottom: none;
 }
 
 .photography .heading__image {
@@ -894,8 +891,7 @@ body {
   width: 100%;
   color: white;
   text-align: center;
-  line-height: 150%;
-  padding: 2.5vh 2.5vw;
+  padding: 50px 10px;
   font-size: 2em;
 }
 
@@ -920,45 +916,6 @@ body {
     font-size: 5em;
     padding-top: 7vh;
   }
-}
-
-.photography__kaden-ideas, .photography__photos {
-  background-color: white;
-  padding: 4vh 0 0 0;
-  margin: 0 7px;
-}
-
-.photography__kaden-ideas h2, .photography__photos h2 {
-  color: #ff6c00;
-  text-align: center;
-  padding: 1vh 0 4vh 0;
-  font-size: 1em;
-}
-
-@media screen and (min-width: 768px) {
-  .photography__kaden-ideas h2, .photography__photos h2 {
-    font-size: 1.5em;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .photography__kaden-ideas h2, .photography__photos h2 {
-    font-size: 2em;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .photography__kaden-ideas h2, .photography__photos h2 {
-    font-size: 2.5em;
-  }
-}
-
-.photography__kaden-ideas {
-  background-color: #282d4f;
-}
-
-.photography__photos {
-  background-color: #23103a;
 }
 
 .photography #photos {
@@ -986,14 +943,14 @@ body {
 }
 
 @media screen and (min-width: 450px) {
-  .photography #photos {
+  .photography #photos, .photography .photography__kaden-ideas {
     -webkit-column-count: 1;
     column-count: 1;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .photography #photos {
+  .photography #photos, .photography .photography__kaden-ideas {
     -webkit-column-count: 2;
     column-count: 2;
   }
@@ -1051,6 +1008,85 @@ body {
   max-width: 80%;
   max-height: 80vh;
   cursor: pointer;
+}
+
+.photography__kaden-ideas, .photography__photos {
+  background-color: rgba(35, 16, 58, 0.9);
+  margin: 0 auto;
+}
+
+.photography__kaden-ideas p, .photography__photos p {
+  text-align: center;
+  padding: 2vh;
+  font-size: 1rem;
+}
+
+.photography__kaden-ideas h2, .photography__photos h2 {
+  color: #ff6c00;
+  text-align: center;
+  padding: 0 0 2vh 0;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .photography__kaden-ideas h2, .photography__photos h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .photography__kaden-ideas h2, .photography__photos h2 {
+    font-size: 2.5rem;
+  }
+}
+
+.photography__kaden-ideas {
+  -moz-column-count: 1;
+  -webkit-column-gap: 0px;
+  -webkit-column-count: 1;
+  -moz-column-gap: 0px;
+  column-count: 1;
+  column-gap: 0px;
+}
+
+.photography__kaden-ideas--columns {
+  border: solid 7px white;
+}
+
+.photography__kaden-ideas--columns h3 {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  color: #ff6c00;
+  border-bottom: 2px solid #ff6c00;
+  padding: 2vh 0 1vh 0;
+}
+
+@media screen and (min-width: 768px) {
+  .photography__kaden-ideas--columns h3 {
+    padding: 3vh 0 1vh 0;
+  }
+}
+
+.photography__kaden-ideas--columns ul {
+  padding: 1vh 2vw 1vh 5vw;
+  min-height: 160px;
+}
+
+.photography__kaden-ideas--columns ul li {
+  list-style-type: square;
+  line-height: 125%;
+  font-size: .8em;
+}
+
+@media screen and (min-width: 768px) {
+  .photography__kaden-ideas--columns ul li {
+    font-size: 1em;
+  }
+}
+
+.photography__photos {
+  font-size: 2em;
 }
 
 h1, h2, h3 {

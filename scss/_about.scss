@@ -6,12 +6,25 @@
     color: $dark-text-color;
     position: relative;
 
+    .site-div {
+            h2 {
+                background-color: rgba($secondary-color, .7);
+                color: $light-text-color;
+                border-top: 15px solid white;
+                text-align: center;
+                font-size: 1.5rem;
+                line-height: 300%;
+                margin-bottom: 4vh;
+                width: 100%;
+            }
+    }
+
     @include media-md {
-        width: 90vw;
+        width: 85vw;
     }
 
     @include media-lg {
-        width: 100vw;
+        width: 95vw;
         padding: 0 3vw 10vh 3vw;
     }
 
@@ -111,14 +124,8 @@
     .summary {
         width: 80vw;
         margin: 0 auto;
-        padding: 5vh 6vw;
+        padding: 0 0 5vh 0;
         background-color: rgba($primary-color, .2);
-
-        &__title {
-            text-align: center;
-            font-size: 1.5rem;
-            padding-bottom: 6vh;
-        }
 
         &__grid {
             display: grid;
@@ -161,22 +168,19 @@
     }
 
     .experience {
-        width: 75vw;
+        width: 80%;
         margin: 0 auto;
         line-height: 120%;
         padding-bottom: 40px;
+        background-color: rgba($contrast-color, .1);
 
         @include media-md {
-            width: 66vw;
-        }
-
-        &__title {
-            padding: 5vh 5vw; 
-            text-align: center;
-            font-size: 2.5rem;
+            width: 80vw;
         }
 
         &__grid {
+            margin: 0 auto;
+            padding: 3vw;
             @include media-md {
                 display: grid;
                 grid-template-columns: 2.5fr 3.5fr;
@@ -194,7 +198,7 @@
                         padding-left: 2vw;
                     }
                 }
-                border-bottom: 2px solid $contrast-color;
+                border-bottom: 2px solid $primary-color;
                 @include media-md {
                     border-bottom: none;
                 }
@@ -204,11 +208,11 @@
                     padding-top: 8px;
                     @include media-md {
                         padding: 0 0 5px 0;
-                        border-bottom: 2px solid $contrast-color;
+                        border-bottom: 2px solid $primary-color;
                     }
                 }
                 ul {
-                    padding: 0 0 8vh 5vw;
+                    padding: 0 0 3vh 5vw;
                     li {
                         list-style-type: circle;
                     }
@@ -222,16 +226,9 @@
 
 
     .abilities {
-        padding: 4vh 0;
         width: 80vw;
         margin: 0 auto;
         background-color: rgba($primary-color, .2);
-
-        &__title {
-            text-align: center;
-            font-size: 2rem;
-            padding-bottom: 4vh;
-        }
 
         &__heading {
             font-size: 1.5rem;
@@ -246,8 +243,22 @@
             display: grid;
             grid-template-columns: 1fr;
             grid-column-gap: 10px;
-            width: 70%;
+            width: 80%;
             margin: auto;
+
+            h3 {
+                color: black;
+                font-weight: bold;
+                padding: 20px 0px 5px 5px;
+                border-bottom: solid $contrast-color 2px;
+                font-size: 1.5rem;
+            }
+            li:first-of-type {
+                padding-top: 2vh;
+            }
+            li {
+                padding: 0 0 3px 5vw;
+            }
 
             @include media-md {
                 grid-template-columns: 1fr 1fr;
@@ -256,23 +267,6 @@
 
             @include media-lg {
                 grid-column-gap: 100px;
-            }
-
-            .checked {
-                color: $accent-color;
-            }
-
-            .unchecked {
-                color: rgba($primary-color, .6);
-            }
-
-            dt {
-                float: left;
-                clear: both;
-                padding-bottom: 6px;
-            }
-            dd {
-                float: right;
             }
         }
         &__soft-skills {
@@ -293,26 +287,22 @@
     }
 
     .education {
-        width: 75vw;
+        width: 80vw;
+        background-color: rgba($contrast-color, .1);
         margin: 0 auto;
         line-height: 120%;
         padding-bottom: 4.5vh;
 
         @include media-md {
-            width: 66vw;
+            width: 80vw;
         }
 
         &__grid {
+            padding: 3vw;
             @include media-md {
                 display: grid;
                 grid-template-columns: 2fr 3fr;
                 grid-column-gap: 10px;
-            }
-
-            &--title {
-                padding: 5vh 5vw; 
-                text-align: center;
-                font-size: 2.5rem;
             }
     
             &--location {
@@ -321,7 +311,7 @@
                     font-weight: 600;
                 }
                 margin-top: 4vh;
-                border-bottom: 2px solid $contrast-color;
+                border-bottom: 2px solid $primary-color;
                 @include media-md {
                     border-bottom: none;
                 }
@@ -351,7 +341,6 @@
     }
 
     .me-time {
-        background-color: rgba($primary-color, .2);
         padding: 0 0 7vh 0;
         width: 75vw;
         margin: auto;
@@ -361,11 +350,8 @@
         }
 
         &__title {
-            padding: 4vh 5vw 4vh 5vw; 
-            text-align: center;
-            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
-
         &__activities {
             width: 90%;
             margin: auto;
@@ -378,7 +364,6 @@
             @include media-sm {
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: 175px 175px;
-                padding-bottom: 5vh;
             }
 
             @include media-md {
