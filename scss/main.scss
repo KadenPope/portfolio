@@ -5,6 +5,61 @@
 @import 'accessibility';
 @import 'photography';
 
+/********************************* SIDE NAVIGATION STYLING ****************************/
+
+.side-nav {
+    display: none;
+    ul {
+        overflow: hidden;
+        position: fixed;
+        font-size: .7rem;
+        width: 100vw;
+        bottom: 4.5vh;
+        z-index: 50;
+        background-color: $contrast-color;
+
+        @include media-md {
+            width: 13vw;
+            right: 0;
+            bottom: 30%;
+        }
+
+        li {
+            float: left;
+            line-height: 125%;
+
+            @include media-md {
+                float: none;
+            }
+
+            a {
+                &:hover {
+                    background-color: $accent-color;
+                    color: white;
+                    @include transition-ease;
+                }
+                font-size: .7rem;
+                color: $dark-text-color;
+                padding: 7px 9px; 
+                margin: 0 0 0 3px;
+                
+                @include media-md {
+                    padding: 15px;
+                    float: right;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @include media-md {
+        position: absolute;
+        z-index: 50;
+        right: 0;
+        bottom: 30%;
+    }
+}
+
 a {
     text-decoration: none;
     color: set-text-color($primary-color);
