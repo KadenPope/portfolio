@@ -19,7 +19,7 @@
 
         li {
             float: left;
-            line-height: 200%;
+            line-height: 125%;
 
             @include media-md {
                 float: none;
@@ -110,7 +110,7 @@
     .header-grid {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 40vh 40vh 40vh 40vh 40vh 30vh;
+        grid-template-rows: 350px 350px 350px 350px 350px 300px;
         grid-template-areas: 
             "summary"
             "experience"
@@ -187,7 +187,7 @@
             line-height: 140%;
             height: 25vh;
             width: 100%;
-            font-size: .75rem;
+            font-size: .65rem;
             color: $light-text-color;
             a {
                 color: $contrast-color;
@@ -219,7 +219,7 @@
             width: 100%;
             position: relative;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 30vh 40vh 40vh 30vh;
+            grid-template-rows: 200px 350px 350px 200px;
             grid-template-areas: 
             "summary        summary"
             "experience     abilities"
@@ -241,7 +241,7 @@
             height: 90vh;
             position: relative;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: 45vh 45vh;
+            grid-template-rows: 350px 350px;
             grid-gap: 10px;
             grid-template-areas: 
             "summary      experience     experience      abilities    abilities"

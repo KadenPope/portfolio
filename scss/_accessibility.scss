@@ -1,8 +1,24 @@
-.home {
+.accessibility {
     width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 0;
+    color: $dark-text-color;
+    position: relative;
+    line-height: 110%;
 
-    @include media-md {
-        margin: 10vh auto 0vh auto;
+    h3 {
+        font-size: .7rem;
+        font-weight: 600;
+    }
+
+    h4 {
+        font-size: .7rem;
+    }
+
+    p, dd, li, dt {
+        font-size: .7rem;
+        color: $dark-text-color;
     }
 
     h2 {
@@ -10,39 +26,35 @@
         font-weight: normal;
     }
 
-    .pages-grid {
+    .header-grid {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 350px 350px 350px 350px 350px 300px;
         grid-template-areas: 
-            "name"
-            "about"
-            "projects"
-            "photography"
-            "design"
+            "id-def"
+            "id-why"
+            "id-tech"
+            "id-coding"
+            "id-resources"
             "contact";
         position: relative;
         grid-gap: 10px;
+        min-height: 100vh;
 
-        &__name {
-
-            background-color: $primary-color;
+        &__id-def {
+            background-color: $secondary-color;
             text-align: center;
             width: 100%;
-            padding: 2rem 0 0 0;
+            padding: 4em 0 0 0;
 
             &--name {
                 font-size: 1.25rem;
+                color: $light-text-color;
                 line-height: 120%;
 
                 @include media-sm {
-                    padding: .5rem 0 .5em 1em;
+                    padding: .25rem 0;
                 }
-
-                @include media-md {
-                    padding: .25rem 0 .5em 1em;
-                }
-    
             }
 
             &--tagline {
@@ -51,24 +63,31 @@
                 line-height: 150%;
                 font-weight: normal;
             }
-            grid-area: name;
+            grid-area: id-def;
+
+            img {
+                display: none;
+            }
             
+            @include media-md {
+                padding: 50px 0 0 0;
+            }
         }
 
-        &__about {
-            grid-area: about;
+        &__id-why {
+            grid-area: id-why;
         }
 
-        &__projects {
-            grid-area: projects;
+        &__id-tech {
+            grid-area: id-tech;
         }
 
-        &__photography {
-            grid-area: photography;
+        &__id-coding {
+            grid-area: id-coding;
         }
 
-        &__design {
-            grid-area: design;
+        &__id-resources {
+            grid-area: id-resources;
         }
 
         &__contact {
@@ -79,9 +98,13 @@
             line-height: 140%;
             height: 25vh;
             width: 100%;
-            font-size: .6em;
+            font-size: .65rem;
+            color: $light-text-color;
             a {
                 color: $contrast-color;
+            }
+            p {
+                color: $light-text-color;
             }
         }
 
@@ -98,22 +121,21 @@
             width: 100%;
             height: 100%;
         }
-    }
-}
+    } 
 
-@include media-md {
-    .home {
+    @include media-md {
         padding: 0 3vw 30vh 3vw;
+        margin-top: 65px;
 
-        .pages-grid {
+        .header-grid {
             width: 100%;
             position: relative;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 200px 350px 350px 200px;
             grid-template-areas: 
-            "name           name"
-            "about          projects"
-            "photography    design"
+            "id-def         id-def"
+            "id-why         id-tech"
+            "id-coding      id-resources"
             "contact        contact";
 
             &__content {
@@ -122,13 +144,11 @@
             }
         }
     }
-}
 
-@include media-lg {
-    .home {
+    @include media-lg {
         padding: 0 3vw 10vh 3vw;
 
-        .pages-grid {
+        .header-grid {
             width: 100%;
             height: 90vh;
             position: relative;
@@ -136,8 +156,8 @@
             grid-template-rows: 350px 350px;
             grid-gap: 10px;
             grid-template-areas: 
-            "name         about         about   projects    projects"
-            "photography  photography   design  design      contact";
+            "id-def       id-why         id-why          id-tech       id-tech"
+            "id-coding    id-coding      id-resources    id-resources  contact";
 
             &__name--name {
                 padding: 0 10px 1em 10px;
@@ -150,3 +170,4 @@
         }
     }
 }
+
