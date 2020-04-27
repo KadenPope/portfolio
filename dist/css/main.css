@@ -34,8 +34,8 @@ li {
   height: 20px;
   width: 28px;
   cursor: pointer;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 @media screen and (min-width: 48em) {
@@ -62,8 +62,8 @@ li {
   width: 28px;
   height: 3px;
   background-color: #ff852d;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .menu-btn__burger::after {
@@ -73,8 +73,8 @@ li {
   width: 20px;
   height: 3px;
   background-color: #ff852d;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .menu-btn__burger.open {
@@ -166,8 +166,8 @@ li {
 .menu-nav__item {
   -webkit-transform: translateX(100vw);
           transform: translateX(100vw);
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   padding: 10px 0 0 20px;
 }
 
@@ -210,8 +210,8 @@ li {
   text-transform: uppercase;
   padding-right: 2rem;
   font-weight: 300;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .menu-nav__item__link:hover {
@@ -1160,9 +1160,6 @@ li {
 }
 
 @media screen and (min-width: 64em) {
-  .accessibility {
-    padding: 0 3vw 10vh 3vw;
-  }
   .accessibility .header-grid {
     width: 100%;
     height: 90vh;
@@ -1560,8 +1557,8 @@ li {
 .side-nav ul li a:hover {
   background-color: #a0204c;
   color: white;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 @media screen and (min-width: 48em) {
@@ -1625,8 +1622,8 @@ footer .social-icons {
 
 footer .social-icons a {
   padding: 0 2.5vw 5vh 0;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 footer .social-icons a:hover {
