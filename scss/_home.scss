@@ -6,7 +6,7 @@
     }
 
     h2 {
-        font-size: 1em;
+        font-size: 1rem;
         font-weight: normal;
     }
 
@@ -29,24 +29,24 @@
             background-color: $primary-color;
             text-align: center;
             width: 100%;
-            padding: 2em 0 0 0;
+            padding: 2rem 0 0 0;
 
             &--name {
-                font-size: 1.25em;
+                font-size: 1.25rem;
                 line-height: 120%;
 
                 @include media-sm {
-                    padding: .5em 0 .5em 1em;
+                    padding: .5rem 0 .5em 1em;
                 }
 
                 @include media-md {
-                    padding: .25em 0 .5em 1em;
+                    padding: .25rem 0 .5em 1em;
                 }
     
             }
 
             &--tagline {
-                font-size: .78em;
+                font-size: .78rem;
                 color: $contrast-color;
                 line-height: 150%;
                 font-weight: normal;
@@ -88,7 +88,7 @@
         &__link-text {
             position: absolute;
             text-align: center;
-            padding: 1em 0;
+            padding: 1rem 0;
             color: $light-text-color;
             width: 100%;
             background-color: rgba($secondary-color, .75);
@@ -145,7 +145,7 @@
 
             &__contact {
                 align-items: center;
-                padding: 6em 0 0 0;
+                padding: 6rem 0 0 0;
             }
         }
     }

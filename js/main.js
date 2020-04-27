@@ -28,7 +28,6 @@ function toggleMenu() {
 }
 
 let mn = document.getElementById("sideNav");
-// let mns = "side-nav-scrolled";
 let hdr = $('.header-grid').height();
 
 $(window).scroll(function() {
