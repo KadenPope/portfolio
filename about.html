@@ -42,36 +42,74 @@
                     </a>
                 </li>
             </ul>
-        </nav> 
+        </nav>
     </header>
 
+    <div class="side-nav" id = "sideNav">
+        <ul>
+            <li><a href="#top">Top</a></li>
+            <li><a href="#summary">About Kaden</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#abilities">Skills & Abilities</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+        </ul>
+    </div>
 
-    <main>
+    <main id="top">
         <section class="about">
-            <div class="side-nav">
-                <ul>
-                    <li><a href="#name">Top</a></li>
-                    <li><a href="#summary">About Kaden</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#abilities">Skills & Abilities</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#me-time">Hobbies</a></li>
-                </ul>
-            </div>  <!-- CLOSE .side-nav -->
-            <div class="name site-div" id="name">
-                <div class="name__text">
-                    <h1 class="name__text--first-name">Kaden Pope</h1>
-                    <h3 class="name__text--tagline">A Brief Introduction</h3>
-                </div>
-                <a href="#summary">
-                    <div class="name__scroll-down">
-                        <div class="name__scroll-down--box">
-                            <h3>Learn More</h3>
-                            <i class="fas fa-angle-double-down fa-2x"></i>
-                        </div>
-                    </div>
+            <div class="header-grid">
+                <div class="header-grid__content header-grid__summary" id="top">
+                    <a href="#summary">
+                        <h1 class="header-grid__summary--name">
+                        Kaden Pope
+                        </h1>
+                        <h2 class="header-grid__summary--tagline">
+                            A Brief Introduction
+                        </h2>
+                        <img src="/images/kaden-headshot.jpg" alt="headshot of Kaden Pope">
                 </a>
-            </div>  <!-- CLOSE .name -->
+                    
+                </div> <!--CLOSE .pages-grid__summary-->
+
+
+                <div class="header-grid__content header-grid__experience">
+                    <a href="#experience">
+                        <h2 class="header-grid__link-text">Experience</h2>
+                        <img class="header-grid__img" src="/images/experience-eagle.jpg" alt="Close up of eagle with an inquisitive look on its face">
+                    </a>
+                </div>  <!--CLOSE .header-grid__experience-->
+                
+                <div class="header-grid__content header-grid__abilities">
+                    <a href="#abilities">
+                        <h2 class="header-grid__link-text">Skills & Abilities</h2>
+                        <img class="header-grid__img" src="/images/abilities.jpg" alt="me as a very young child brushing my hair with my mom">
+                    </a>
+                </div> <!--CLOSE .header-grid__abilities-->
+
+                <div class="header-grid__content header-grid__education">
+                    <a href="#education">
+                        <h2 class="header-grid__link-text">Education</h2>
+                        <img class="header-grid__img" src="/images/education-protest.jpg" alt="Protest Sign saying, Wont someone please think of the children">
+                    </a>
+                </div> <!--CLOSE .pages-grid__education-->
+
+
+                <div class="header-grid__content header-grid__hobbies">
+                    <a href="#hobbies">
+                        <h2 class="header-grid__link-text">Hobbies</h2>
+                        <img class="header-grid__img" src="/images/hobbies-science-world.jpg" alt="Early morning view of south side stairs to science world with person in black walking below">
+                    </a>
+                </div>  <!--CLOSE .pages-grid__hobbies-->
+
+
+                <div class="header-grid__content header-grid__contact">
+                    <p>Contact Kaden:</p>
+                    <a href="mailto:kadencpope@outlook.com">kadencpope@outlook.com</a>
+                </div>  <!--CLOSE .pages-grid__contact-->
+            </div> <!--CLOSE HEADER-GRID-->
+            
+            
             <div class="summary site-div" id="summary">
                 <h2>
                     About Kaden
@@ -95,6 +133,7 @@
                     </p>
                 </div>
             </div>  <!-- CLOSE .summary -->
+
             <div class="site-div experience" id="experience">
                 <h2 class="experience__title">
                     Experience
@@ -354,37 +393,37 @@
                     </div>
                 </div>
             </div>  <!-- CLOSE .education-->
-            <div class="site-div me-time" id="me-time">
-                <h2 class="me-time__title">
+            <div class="site-div hobbies" id="hobbies">
+                <h2 class="hobbies__title">
                     Hobbies
                 </h2>
-                <div class="me-time__activities">
-                    <div class="me-time__activities--activity">
+                <div class="hobbies__activities">
+                    <div class="hobbies__activities--activity">
                         <img src="/images/coding-screenshot.png" alt="Screenshot of code">
                         <h3>
                             Coding
                         </h3>
                     </div>
-                    <div class="me-time__activities--activity">
+                    <div class="hobbies__activities--activity">
                         <img src="/images/science-world.jpg" alt="Early morning photo of science world looking over from the opposite side of False Creek">
                         <h3>
                             Photography
                         </h3>
                     </div>
-                    <div class="me-time__activities--activity">
+                    <div class="hobbies__activities--activity">
                         <img src="images/oboe-bill-pope.jpg" alt="image of hands and oboe by Bill Pope, Gabriola Island">
                         <h3>
                             Oboe
                         </h3>
                     </div>
-                    <div class="me-time__activities--activity">
+                    <div class="hobbies__activities--activity">
                         <img src="/images/monkeys.jpg" alt="two knitted sock monkeys sitting on a bed">
                         <h3>
                             Knitting
                         </h3>
                     </div>
-                </div>  <!-- CLOSE .me-time__activities-->
-            </div>  <!-- CLOSE .me-time-->
+                </div>  <!-- CLOSE .hobbies__activities-->
+            </div>  <!-- CLOSE .hobbies-->
     </main>
     <footer>
         <div class="social-icons">
@@ -412,6 +451,7 @@
         <p>&copy; 2020 Kaden Pope</p>
     </footer>
     <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="/js/main.js"></script>
 </body>
 </html>

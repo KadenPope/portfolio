@@ -402,6 +402,70 @@ li {
   }
 }
 
+.side-nav {
+  display: none;
+}
+
+.side-nav ul {
+  overflow: hidden;
+  position: fixed;
+  font-size: .7em;
+  width: 100vw;
+  bottom: 4vh;
+  z-index: 50;
+  background-color: #ff852d;
+}
+
+@media screen and (min-width: 48em) {
+  .side-nav ul {
+    width: 13vw;
+    right: 0;
+    bottom: 30%;
+  }
+}
+
+.side-nav ul li {
+  float: left;
+  line-height: 100%;
+}
+
+@media screen and (min-width: 48em) {
+  .side-nav ul li {
+    float: none;
+  }
+}
+
+.side-nav ul li a {
+  font-size: .85em;
+  color: black;
+  padding: 7px 9px;
+  margin: 0 0 0 3px;
+}
+
+.side-nav ul li a:hover {
+  background-color: #a0204c;
+  color: white;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+@media screen and (min-width: 48em) {
+  .side-nav ul li a {
+    padding: 15px;
+    float: right;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .side-nav {
+    position: absolute;
+    z-index: 50;
+    right: 0;
+    bottom: 30%;
+  }
+}
+
 .about {
   width: 100vw;
   display: -ms-grid;
@@ -423,7 +487,13 @@ li {
 }
 
 .about p, .about dd, .about li, .about dt {
-  font-size: .65em;
+  font-size: .7em;
+  color: black;
+}
+
+.about h2 {
+  font-size: 1em;
+  font-weight: normal;
 }
 
 .about .site-div h2 {
@@ -431,136 +501,193 @@ li {
   color: white;
   border-top: 15px solid white;
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1em;
   line-height: 300%;
-  margin: 4vh 0;
   width: 100%;
   font-weight: normal;
 }
 
 @media screen and (min-width: 48em) {
   .about {
-    width: 85vw;
+    width: 100vw;
     margin: 10vh auto 9vh auto;
   }
 }
 
 @media screen and (min-width: 64em) {
   .about {
-    width: 95vw;
-    padding: 0 3vw 10vh 3vw;
+    width: 100vw;
+    padding: 0 auto 10vh auto;
   }
 }
 
-.about .side-nav {
-  position: fixed;
-  background-color: #ff852d;
-  bottom: 33px;
-  z-index: 50;
-}
-
-@media screen and (min-width: 48em) {
-  .about .side-nav {
-    right: 0;
-    bottom: 30%;
-  }
-}
-
-.about .side-nav ul {
-  overflow: hidden;
-  width: 100vw;
-}
-
-@media screen and (min-width: 48em) {
-  .about .side-nav ul {
-    width: 13vw;
-  }
-}
-
-.about .side-nav ul li {
-  float: left;
-  line-height: 100%;
-}
-
-@media screen and (min-width: 48em) {
-  .about .side-nav ul li {
-    float: none;
-    display: block;
-  }
-}
-
-.about .side-nav ul li a {
-  font-size: .85em;
-  display: block;
-  color: black;
-  padding: 7px 9px;
-  margin: 0 0 0 3px;
-}
-
-.about .side-nav ul li a:hover {
-  background-color: #a0204c;
-  color: white;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-}
-
-@media screen and (min-width: 48em) {
-  .about .side-nav ul li a {
-    padding: 15px;
-    float: right;
-    width: 100%;
-  }
-}
-
-.about .name {
-  background-image: url("/images/dragonfly.jpg");
-  height: 100vh;
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
+.about .header-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 40vh 40vh 40vh 40vh 40vh 30vh;
+      grid-template-rows: 40vh 40vh 40vh 40vh 40vh 30vh;
+      grid-template-areas: "summary" "experience" "abilities" "education" "hobbies" "contact";
   position: relative;
+  grid-gap: 10px;
 }
 
-.about .name__text {
-  padding: 8vh 3vw;
+.about .header-grid__summary {
+  background-color: #23103a;
+  text-align: center;
+  width: 100%;
+  padding: 4em 0 0 0;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: summary;
+}
+
+.about .header-grid__summary--name {
+  font-size: 1.25em;
+  color: white;
+  line-height: 120%;
+}
+
+@media screen and (min-width: 28em) {
+  .about .header-grid__summary--name {
+    padding: .25em 0;
+  }
+}
+
+.about .header-grid__summary--tagline {
+  font-size: .78em;
+  color: #ff852d;
+  line-height: 150%;
+  font-weight: normal;
+}
+
+.about .header-grid__summary img {
+  display: none;
+}
+
+@media screen and (min-width: 48em) {
+  .about .header-grid__summary {
+    padding: 0 0 0 0;
+  }
+  .about .header-grid__summary img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 2px solid white;
+    height: 60%;
+    width: auto;
+  }
+}
+
+.about .header-grid__experience {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: experience;
+}
+
+.about .header-grid__abilities {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: abilities;
+}
+
+.about .header-grid__education {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: education;
+}
+
+.about .header-grid__hobbies {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: hobbies;
+}
+
+.about .header-grid__contact {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: contact;
+  background-color: #282d4f;
+  text-align: center;
+  padding-top: 10vh;
+  line-height: 140%;
+  height: 25vh;
+  width: 100%;
+  font-size: .75em;
+  color: white;
+}
+
+.about .header-grid__contact a {
+  color: #ff852d;
+}
+
+.about .header-grid__contact p {
+  color: white;
+}
+
+.about .header-grid__link-text {
+  position: absolute;
+  text-align: center;
+  padding: 1em 0;
+  color: white;
+  width: 100%;
   background-color: rgba(35, 16, 58, 0.75);
 }
 
-.about .name__text--first-name {
-  font-size: 2.3em;
-  font-weight: bold;
-  color: white;
+.about .header-grid__img {
+  width: 100%;
+  height: 100%;
 }
 
-.about .name__text--tagline {
-  color: #ff852d;
-  font-weight: normal;
-  padding-top: 4vh;
+@media screen and (min-width: 48em) {
+  .about {
+    padding: 0 3vw 30vh 3vw;
+  }
+  .about .header-grid {
+    width: 100%;
+    position: relative;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 30vh 40vh 40vh 30vh;
+        grid-template-rows: 30vh 40vh 40vh 30vh;
+        grid-template-areas: "summary        summary" "experience     abilities" "education      hobbies" "contact        contact";
+  }
+  .about .header-grid__content {
+    position: absolute;
+    height: 100%;
+  }
 }
 
-.about .name__scroll-down {
-  color: #ff852d;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-}
-
-.about .name__scroll-down--box {
-  background-color: rgba(40, 45, 79, 0.7);
-  margin-left: -50%;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-}
-
-.about .name__scroll-down--box:hover {
-  color: white;
+@media screen and (min-width: 64em) {
+  .about {
+    padding: 0 3vw 10vh 3vw;
+  }
+  .about .header-grid {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 45vh 45vh;
+        grid-template-rows: 45vh 45vh;
+    grid-gap: 10px;
+        grid-template-areas: "summary      experience     experience      abilities    abilities" "education    education      hobbies         hobbies     contact";
+  }
+  .about .header-grid__name--name {
+    padding: 0 10px 1em 10px;
+  }
+  .about .header-grid__contact {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 6em 0 0 0;
+  }
 }
 
 .about .summary {
   width: 80vw;
   margin: 0 auto;
-  padding: 0 0 5vh 0;
   background-color: rgba(40, 45, 79, 0.1);
 }
 
@@ -827,7 +954,7 @@ li {
   list-style-type: circle;
 }
 
-.about .me-time {
+.about .hobbies {
   padding: 0 0 7vh 0;
   width: 75vw;
   margin: auto;
@@ -835,16 +962,16 @@ li {
 }
 
 @media screen and (min-width: 48em) {
-  .about .me-time {
+  .about .hobbies {
     width: 80vw;
   }
 }
 
-.about .me-time__title {
+.about .hobbies__title {
   margin-bottom: 10px;
 }
 
-.about .me-time__activities {
+.about .hobbies__activities {
   width: 90%;
   margin: auto;
   display: -ms-grid;
@@ -858,7 +985,7 @@ li {
 }
 
 @media screen and (min-width: 28em) {
-  .about .me-time__activities {
+  .about .hobbies__activities {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 175px 175px;
@@ -867,31 +994,31 @@ li {
 }
 
 @media screen and (min-width: 48em) {
-  .about .me-time__activities {
+  .about .hobbies__activities {
     -ms-grid-rows: 250px 250px;
         grid-template-rows: 250px 250px;
   }
 }
 
 @media screen and (min-width: 64em) {
-  .about .me-time__activities {
+  .about .hobbies__activities {
     -ms-grid-rows: 300px 300px;
         grid-template-rows: 300px 300px;
   }
 }
 
 @media screen and (min-width: 100em) {
-  .about .me-time__activities {
+  .about .hobbies__activities {
     -ms-grid-rows: 350px 350px;
         grid-template-rows: 350px 350px;
   }
 }
 
-.about .me-time__activities--activity {
+.about .hobbies__activities--activity {
   position: relative;
 }
 
-.about .me-time__activities--activity h3 {
+.about .hobbies__activities--activity h3 {
   text-align: center;
   color: #fff;
   line-height: 250%;
@@ -902,7 +1029,7 @@ li {
   font-weight: normal;
 }
 
-.about .me-time__activities--activity img {
+.about .hobbies__activities--activity img {
   height: 100%;
   width: 100%;
 }

@@ -26,3 +26,15 @@ function toggleMenu() {
         showMenu = false;
     }
 }
+
+let mn = document.getElementById("sideNav");
+// let mns = "side-nav-scrolled";
+let hdr = $('.header-grid').height();
+
+$(window).scroll(function() {
+  if( $(this).scrollTop() > hdr ) {
+    mn.style.display = "block";
+  } else {
+    mn.style.display = "none";
+  }
+});
