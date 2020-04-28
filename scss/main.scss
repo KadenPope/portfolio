@@ -139,6 +139,18 @@ body {
     }
 }
 
+.site-div {
+    h2 {
+        background-color: $secondary-color;
+        color: $light-text-color;
+        border-top: 55px solid white;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 300%;
+        width: 100%;
+        font-weight: normal;
+    
+
 header {
     position: fixed;
     z-index: 100;
