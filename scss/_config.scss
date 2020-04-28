@@ -4,6 +4,7 @@ $accent-color: #a0204c;
 $contrast-color: #ff852d;
 $light-text-color: white;
 $dark-text-color: black;
+$small-text-size: .7rem;
 $font-style: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 
@@ -27,12 +28,6 @@ img {
     width: 100%;
     height: auto;
 }
-
-li {
-    list-style-type: none;
-    line-height: 125%;
-}
-
 
 @mixin transition-ease {
     transition: all .3s ease-in-out;

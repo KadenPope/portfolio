@@ -8,25 +8,6 @@
     position: relative;
     line-height: 110%;
 
-    h3 {
-        font-size: .7rem;
-        font-weight: 600;
-    }
-
-    h4 {
-        font-size: .7rem;
-    }
-
-    p, dd, li, dt {
-        font-size: .7rem;
-        color: $dark-text-color;
-    }
-
-    h2 {
-        font-size: 1rem;
-        font-weight: normal;
-    }
-
     .site-div {
         h2 {
             background-color: $secondary-color;
@@ -42,12 +23,11 @@
 
     @include media-md {
         width: 100vw;
-        margin: 10vh auto 9vh auto;
+        margin: 10vh auto;
     }
 
     @include media-lg {
         width: 100vw;
-        padding: 0 auto 10vh auto;
     }
 
 /*************************************  GRID SETUP (HEADING) ******************************/
@@ -55,7 +35,7 @@
     .header-grid {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 200px 350px 350px 350px 350px 300px;
+        grid-template-rows: 200px 350px 350px 350px 350px 150px;
         grid-template-areas: 
             "summary"
             "experience"
@@ -65,7 +45,7 @@
             "contact";
         position: relative;
         grid-gap: 10px;
-        min-height: 100vh;
+        min-height: 10rem;
 
         &__summary {
             background-color: $secondary-color;
@@ -158,7 +138,7 @@
     } 
 
     @include media-md {
-        padding: 0 3vw 30vh 3vw;
+        padding: 0 10vw 30vh 10vw;
 
         .header-grid {
             width: 100%;
@@ -183,7 +163,6 @@
 
         .header-grid {
             width: 100%;
-            height: 90vh;
             position: relative;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             grid-template-rows: 350px 350px;
@@ -206,7 +185,6 @@
     /*********************************** ABOUT ME/SUMMARY ***********************************/
 
     .summary {
-        width: 80vw;
         margin: 0 auto;
         background-color: rgba($primary-color, .1);
 
@@ -224,17 +202,12 @@
             &--headshot {
                 width: 70%;
                 max-width: 250px;
-                margin: auto;
-                padding-bottom: 5vh;
+                margin: 3vh auto;
     
                 &-border {
                     border-radius: 50%;
                     border: 9px solid $accent-color;
                 }
-            }
-
-            &--text {
-                padding: .5rem 1.5rem 0 0;
             }
         }
 
@@ -249,19 +222,13 @@
     }
 
     .experience {
-        width: 80%;
         margin: 0 auto;
         line-height: 110%;
         padding-bottom: 40px;
         background-color: rgba($contrast-color, .1);
 
-        @include media-md {
-            width: 80vw;
-        }
-
         &__grid {
             margin: 0 auto;
-            padding: 3vw;
             @include media-md {
                 display: grid;
                 grid-template-columns: 2.5fr 3.5fr;
@@ -269,20 +236,27 @@
             }
 
             &--location {
+                padding: 0 1em;
                 p {
-                    padding: 2px 0 1vh 5vw;
+                    padding: .5em 0 1vh 5vw;
                     @include media-md {
                         padding-left: 2vw;
                     }
                 }
-                border-bottom: 2px solid $primary-color;
+                border-bottom: 2px solid $contrast-color;
                 @include media-md {
                     border-bottom: none;
+                }
+                h3 {
+                    padding: 2rem 0 0 0;
+                    @include media-md {
+                        padding: 0;
+                    }
                 }
             }
             &--details {
                 h4 {
-                    padding-top: 8px;
+                    padding-top: .5rem;
                     @include media-md {
                         padding: 0 0 5px 0;
                         border-bottom: 2px solid $primary-color;
@@ -303,12 +277,11 @@
 
 
     .abilities {
-        width: 80vw;
         margin: 0 auto;
         background-color: rgba($primary-color, .1);
 
         &__heading {
-            width: 80%;
+            width: 90%;
             padding: 7px 0 1vh 1vw;
             margin: 1.5vh auto;
             font-weight: bolder;
@@ -317,51 +290,19 @@
         }
 
         &__skills {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-column-gap: 10px;
-            width: 80%;
-            margin: auto;
-
-            h3 {
-                color: black;
-                font-weight: bold;
-                padding: 20px 0px 5px 5px;
-                border-bottom: solid $contrast-color 2px;
-            }
-
-            @include media-md {
-                dl {
-                    display: grid;
-                    grid-template-columns: 1fr 3.5fr;
-                }
-            }
-
-            dt {
-                font-weight: 600;
-            }
-
-            dd {
-                margin: 0 0 3.5vh 0;
-
-                a {
-                    color: $accent-color;
-                }
-            }
-        }
-
-        &__soft-skills {
             
             display: grid;
             grid-template-columns: 1fr;
-            grid-column-gap: 10px;
-            width: 80%;
-            margin: auto;
+            margin: 0 auto;
+
+            a {
+                color: $accent-color;
+            }
 
             h3 {
                 color: black;
                 font-weight: bold;
-                padding: 20px 0px 5px 5px;
+                padding: 2.5rem 0px 5px 5px;
                 border-bottom: solid $contrast-color 2px;
                 font-size: .85rem;
             }
@@ -375,22 +316,24 @@
 
             dt {
                 font-weight: 600;
+                margin: 1.25rem 0 0 0;
+                @include media-md {
+                    margin: 0;
+                }
             }
 
             dd {
-                margin: 0 0 3.5vh 0;
+                margin: 0 0 1.5rem 0;
             }
         }
     }
 
     .education {
-        width: 80vw;
         background-color: rgba($contrast-color, .1);
         margin: 0 auto;
         padding-bottom: 4.5vh;
 
         &__grid {
-            padding: 3vw;
             @include media-md {
                 display: grid;
                 grid-template-columns: 2fr 3fr;
@@ -398,7 +341,8 @@
             }
     
             &--location {
-                border-bottom: 2px solid $primary-color;
+                border-bottom: 2px solid $contrast-color;
+                padding: 2rem 0 0 0;
 
                 @include media-md {
                     border-bottom: none;
@@ -430,21 +374,16 @@
     }
 
     .hobbies {
-        padding: 0 0 7vh 0;
-        width: 75vw;
+        padding: 0 0 6em 0;
         margin: auto;
         background-color: rgba($primary-color, .1);
-
-        @include media-md {
-            width: 80vw;
-        }
 
         &__title {
             margin-bottom: 10px;
         }
 
         &__activities {
-            width: 90%;
+            width: 100%;
             margin: auto;
             display: grid;
             grid-row-gap: 10px;
@@ -468,6 +407,7 @@
             @include media-xl {
                 grid-template-rows: 350px 350px;
             }
+
             &--activity {
                 position: relative;
 

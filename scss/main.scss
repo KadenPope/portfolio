@@ -12,21 +12,25 @@
     ul {
         overflow: hidden;
         position: fixed;
-        font-size: .7rem;
+        font-size: $small-text-size;
         width: 100vw;
-        bottom: 4.5vh;
-        z-index: 50;
+        bottom: 2rem;
+        z-index: 100;
         background-color: $contrast-color;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
 
         @include media-md {
-            width: 13vw;
+            flex-direction: column;
+            width: 6.5rem;
             right: 0;
-            bottom: 30%;
+            bottom: 25vh;
         }
 
         li {
             float: left;
-            line-height: 125%;
+            margin: 0;
 
             @include media-md {
                 float: none;
@@ -38,13 +42,12 @@
                     color: white;
                     @include transition-ease;
                 }
-                font-size: .7rem;
+                font-size: $small-text-size;
                 color: $dark-text-color;
-                padding: 7px 9px; 
-                margin: 0 0 0 3px;
+                padding: .25rem .75rem; 
+                line-height: 200%;
                 
                 @include media-md {
-                    padding: 15px;
                     float: right;
                     width: 100%;
                 }
@@ -58,6 +61,51 @@
         right: 0;
         bottom: 30%;
     }
+}
+
+.under-development {
+    padding: 1.5em;
+}
+
+h3 {
+    font-size: $small-text-size;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: $small-text-size;
+    padding: 0 0 0 1em;
+}
+
+p, figcaption {
+    font-size: $small-text-size;
+    color: $dark-text-color;
+    padding: .75rem 1.5rem;
+}
+
+a {
+    color: $accent-color;
+}
+
+li {
+    font-size: $small-text-size;
+    list-style-type: none;
+    // margin: 0 0 0 1.25rem;
+    line-height: 140%;
+}
+
+dd, dt {
+    font-size: $small-text-size;
+    padding: 0 1.25rem;
+}
+
+.light-text {
+    color: $light-text-color;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: normal;
 }
 
 a {
@@ -75,6 +123,16 @@ body {
     color: $contrast-color;
 }
 
+.grid-content-layout {
+    padding: 3vw;
+}
+
+@include media-md {
+    .grid-content-layout {
+        padding: 0 5.5rem 0 3rem;
+    }
+}
+
 header {
     position: fixed;
     z-index: 100;
@@ -82,32 +140,40 @@ header {
 }
 
 footer {
-
     background-color: $accent-color;
     position: fixed;
     bottom: 0;
-    color: set-text-color($accent-color);
+    color: $accent-color;
     width: 100vw;
-    line-height: 200%;
-    padding: 0 1.5rem;    
-    text-align: right;
-    font-size: .7rem;
+    padding: 0;    
+    font-size: $small-text-size;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 100;
 
-    .social-icon {
-        float: left;
-        color: set-text-color($primary-color);
+    @include media-md {
+        justify-content: space-between;
+        padding: 0 1.5rem
     }
 
+
     .social-icons {
-        position: fixed;
-
-        a {
-            padding: 0 2.5vw 5vh 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .social-icon {
+        color: $light-text-color;
+        display: block;
+        padding: .5rem;
+        &:hover {
+            color: $contrast-color;
             @include transition-ease;
-
-            &:hover {
-                color: $contrast-color;
-            }
         }
+    }
+    p {
+        padding: .5rem 0;
+
     }
 }

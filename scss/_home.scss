@@ -5,15 +5,10 @@
         margin: 10vh auto 0vh auto;
     }
 
-    h2 {
-        font-size: 1rem;
-        font-weight: normal;
-    }
-
     .pages-grid {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 200px 350px 350px 350px 350px 300px;
+        grid-template-rows: 200px 350px 350px 350px 350px 200px;
         grid-template-areas: 
             "name"
             "about"
@@ -23,6 +18,7 @@
             "contact";
         position: relative;
         grid-gap: 10px;
+        min-height: 20rem;
 
         &__name {
 
@@ -104,6 +100,7 @@
 @include media-md {
     .home {
         padding: 0 3vw 30vh 3vw;
+        margin: 2.5rem 0 3rem 0;
 
         .pages-grid {
             width: 100%;

@@ -20,11 +20,6 @@ img {
   height: auto;
 }
 
-li {
-  list-style-type: none;
-  line-height: 125%;
-}
-
 /************************************  NAV HAMBURGER ***********************************/
 .menu-btn {
   position: absolute;
@@ -98,9 +93,10 @@ li {
 .nav {
   display: none;
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
-  width: 55vw;
+  width: 45vw;
   opacity: 0.98;
   visibility: hidden;
 }
@@ -135,10 +131,9 @@ li {
   -webkit-box-align: left;
       -ms-flex-align: left;
           align-items: left;
-  height: 100vh;
+  height: 95vh;
   background: #a0204c;
   list-style-type: none;
-  padding-right: 1rem;
 }
 
 .menu-nav.open {
@@ -168,14 +163,31 @@ li {
           transform: translateX(100vw);
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
-  padding: 10px 0 0 20px;
+  padding: 5px 1.75rem 5px 1.25rem;
+}
+
+.menu-nav__item a {
+  display: block;
+  margin: 0 0 0 0;
+  padding: .75em 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 48em) {
+  .menu-nav__item a {
+    font-size: .7rem;
+    padding: 15px 10px 5px 5px;
+  }
 }
 
 @media screen and (min-width: 48em) {
   .menu-nav__item {
     -webkit-transform: none;
             transform: none;
-    padding: 3px 10px 4px 10px;
+    padding: 0 10px 4px 10px;
+  }
+  .menu-nav__item a {
+    line-height: 100%;
   }
 }
 
@@ -184,24 +196,25 @@ li {
           transform: translateX(0);
 }
 
+.menu-nav__item.active > a {
+  font-weight: bold;
+  color: black;
+}
+
+@media screen and (min-width: 48em) {
+  .menu-nav__item.active > a {
+    color: white;
+    font-weight: normal;
+    border-bottom: 3px solid white;
+  }
+}
+
 .menu-nav__item:hover {
   background-color: #282d4f;
 }
 
-.menu-nav__item a {
-  line-height: 260%;
-}
-
-@media screen and (min-width: 48em) {
-  .menu-nav__item a {
-    font-size: .7rem;
-    line-height: 200%;
-    padding: 15px 10px 5px 10px;
-  }
-}
-
-.menu-nav__item.active > a {
-  border-bottom: 3px solid white;
+.menu-nav__item:hover a {
+  color: white;
 }
 
 .menu-nav__item__link {
@@ -210,37 +223,10 @@ li {
   text-transform: uppercase;
   padding-right: 2rem;
   font-weight: 300;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
 }
 
 .menu-nav__item__link:hover {
   color: #23103a;
-}
-
-.menu-nav__item:nth-child(1) {
-  -webkit-transition-delay: 0.35s;
-          transition-delay: 0.35s;
-}
-
-.menu-nav__item:nth-child(2) {
-  -webkit-transition-delay: 0.45s;
-          transition-delay: 0.45s;
-}
-
-.menu-nav__item:nth-child(3) {
-  -webkit-transition-delay: 0.55s;
-          transition-delay: 0.55s;
-}
-
-.menu-nav__item:nth-child(4) {
-  -webkit-transition-delay: 0.65s;
-          transition-delay: 0.65s;
-}
-
-.menu-nav__item:nth-child(5) {
-  -webkit-transition-delay: 0.75s;
-          transition-delay: 0.75s;
 }
 
 .home {
@@ -253,21 +239,17 @@ li {
   }
 }
 
-.home h2 {
-  font-size: 1rem;
-  font-weight: normal;
-}
-
 .home .pages-grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 200px 350px 350px 350px 350px 300px;
-      grid-template-rows: 200px 350px 350px 350px 350px 300px;
+  -ms-grid-rows: 200px 350px 350px 350px 350px 200px;
+      grid-template-rows: 200px 350px 350px 350px 350px 200px;
       grid-template-areas: "name" "about" "projects" "photography" "design" "contact";
   position: relative;
   grid-gap: 10px;
+  min-height: 20rem;
 }
 
 .home .pages-grid__name {
@@ -362,6 +344,7 @@ li {
 @media screen and (min-width: 48em) {
   .home {
     padding: 0 3vw 30vh 3vw;
+    margin: 2.5rem 0 3rem 0;
   }
   .home .pages-grid {
     width: 100%;
@@ -418,25 +401,6 @@ li {
   /*********************************** ABOUT ME/SUMMARY ***********************************/
 }
 
-.about h3 {
-  font-size: .7rem;
-  font-weight: 600;
-}
-
-.about h4 {
-  font-size: .7rem;
-}
-
-.about p, .about dd, .about li, .about dt {
-  font-size: .7rem;
-  color: black;
-}
-
-.about h2 {
-  font-size: 1rem;
-  font-weight: normal;
-}
-
 .about .site-div h2 {
   background-color: #23103a;
   color: white;
@@ -451,14 +415,13 @@ li {
 @media screen and (min-width: 48em) {
   .about {
     width: 100vw;
-    margin: 10vh auto 9vh auto;
+    margin: 10vh auto;
   }
 }
 
 @media screen and (min-width: 64em) {
   .about {
     width: 100vw;
-    padding: 0 auto 10vh auto;
   }
 }
 
@@ -467,12 +430,12 @@ li {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 200px 350px 350px 350px 350px 300px;
-      grid-template-rows: 200px 350px 350px 350px 350px 300px;
+  -ms-grid-rows: 200px 350px 350px 350px 350px 150px;
+      grid-template-rows: 200px 350px 350px 350px 350px 150px;
       grid-template-areas: "summary" "experience" "abilities" "education" "hobbies" "contact";
   position: relative;
   grid-gap: 10px;
-  min-height: 100vh;
+  min-height: 10rem;
 }
 
 .about .header-grid__summary {
@@ -584,7 +547,7 @@ li {
 
 @media screen and (min-width: 48em) {
   .about {
-    padding: 0 3vw 30vh 3vw;
+    padding: 0 10vw 30vh 10vw;
   }
   .about .header-grid {
     width: 100%;
@@ -607,7 +570,6 @@ li {
   }
   .about .header-grid {
     width: 100%;
-    height: 90vh;
     position: relative;
     -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -628,7 +590,6 @@ li {
 }
 
 .about .summary {
-  width: 80vw;
   margin: 0 auto;
   background-color: rgba(40, 45, 79, 0.1);
 }
@@ -656,17 +617,12 @@ li {
 .about .summary__grid--headshot {
   width: 70%;
   max-width: 250px;
-  margin: auto;
-  padding-bottom: 5vh;
+  margin: 3vh auto;
 }
 
 .about .summary__grid--headshot-border {
   border-radius: 50%;
   border: 9px solid #a0204c;
-}
-
-.about .summary__grid--text {
-  padding: .5rem 1.5rem 0 0;
 }
 
 .about .summary__contact {
@@ -679,22 +635,14 @@ li {
 }
 
 .about .experience {
-  width: 80%;
   margin: 0 auto;
   line-height: 110%;
   padding-bottom: 40px;
   background-color: rgba(255, 133, 45, 0.1);
 }
 
-@media screen and (min-width: 48em) {
-  .about .experience {
-    width: 80vw;
-  }
-}
-
 .about .experience__grid {
   margin: 0 auto;
-  padding: 3vw;
 }
 
 @media screen and (min-width: 48em) {
@@ -708,11 +656,12 @@ li {
 }
 
 .about .experience__grid--location {
-  border-bottom: 2px solid #282d4f;
+  padding: 0 1em;
+  border-bottom: 2px solid #ff852d;
 }
 
 .about .experience__grid--location p {
-  padding: 2px 0 1vh 5vw;
+  padding: .5em 0 1vh 5vw;
 }
 
 @media screen and (min-width: 48em) {
@@ -727,8 +676,18 @@ li {
   }
 }
 
+.about .experience__grid--location h3 {
+  padding: 2rem 0 0 0;
+}
+
+@media screen and (min-width: 48em) {
+  .about .experience__grid--location h3 {
+    padding: 0;
+  }
+}
+
 .about .experience__grid--details h4 {
-  padding-top: 8px;
+  padding-top: .5rem;
 }
 
 @media screen and (min-width: 48em) {
@@ -753,13 +712,12 @@ li {
 }
 
 .about .abilities {
-  width: 80vw;
   margin: 0 auto;
   background-color: rgba(40, 45, 79, 0.1);
 }
 
 .about .abilities__heading {
-  width: 80%;
+  width: 90%;
   padding: 7px 0 1vh 1vw;
   margin: 1.5vh auto;
   font-weight: bolder;
@@ -772,16 +730,19 @@ li {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  grid-column-gap: 10px;
-  width: 80%;
-  margin: auto;
+  margin: 0 auto;
+}
+
+.about .abilities__skills a {
+  color: #a0204c;
 }
 
 .about .abilities__skills h3 {
   color: black;
   font-weight: bold;
-  padding: 20px 0px 5px 5px;
+  padding: 2.5rem 0px 5px 5px;
   border-bottom: solid #ff852d 2px;
+  font-size: .85rem;
 }
 
 @media screen and (min-width: 48em) {
@@ -795,60 +756,23 @@ li {
 
 .about .abilities__skills dt {
   font-weight: 600;
-}
-
-.about .abilities__skills dd {
-  margin: 0 0 3.5vh 0;
-}
-
-.about .abilities__skills dd a {
-  color: #a0204c;
-}
-
-.about .abilities__soft-skills {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  grid-column-gap: 10px;
-  width: 80%;
-  margin: auto;
-}
-
-.about .abilities__soft-skills h3 {
-  color: black;
-  font-weight: bold;
-  padding: 20px 0px 5px 5px;
-  border-bottom: solid #ff852d 2px;
-  font-size: .85rem;
+  margin: 1.25rem 0 0 0;
 }
 
 @media screen and (min-width: 48em) {
-  .about .abilities__soft-skills dl {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 3.5fr;
-        grid-template-columns: 1fr 3.5fr;
+  .about .abilities__skills dt {
+    margin: 0;
   }
 }
 
-.about .abilities__soft-skills dt {
-  font-weight: 600;
-}
-
-.about .abilities__soft-skills dd {
-  margin: 0 0 3.5vh 0;
+.about .abilities__skills dd {
+  margin: 0 0 1.5rem 0;
 }
 
 .about .education {
-  width: 80vw;
   background-color: rgba(255, 133, 45, 0.1);
   margin: 0 auto;
   padding-bottom: 4.5vh;
-}
-
-.about .education__grid {
-  padding: 3vw;
 }
 
 @media screen and (min-width: 48em) {
@@ -862,7 +786,8 @@ li {
 }
 
 .about .education__grid--location {
-  border-bottom: 2px solid #282d4f;
+  border-bottom: 2px solid #ff852d;
+  padding: 2rem 0 0 0;
 }
 
 @media screen and (min-width: 48em) {
@@ -897,16 +822,9 @@ li {
 }
 
 .about .hobbies {
-  padding: 0 0 7vh 0;
-  width: 75vw;
+  padding: 0 0 6em 0;
   margin: auto;
   background-color: rgba(40, 45, 79, 0.1);
-}
-
-@media screen and (min-width: 48em) {
-  .about .hobbies {
-    width: 80vw;
-  }
 }
 
 .about .hobbies__title {
@@ -914,7 +832,7 @@ li {
 }
 
 .about .hobbies__activities {
-  width: 90%;
+  width: 100%;
   margin: auto;
   display: -ms-grid;
   display: grid;
@@ -985,31 +903,6 @@ li {
   /**************************** WHAT IS INCLUSIVE DESIGN ******************/
 }
 
-.accessibility .under-development {
-  padding: 1.5em;
-}
-
-.accessibility h3 {
-  font-size: .7rem;
-  font-weight: 600;
-}
-
-.accessibility h4 {
-  font-size: .7rem;
-  padding: 0 0 0 1em;
-}
-
-.accessibility p, .accessibility dd, .accessibility li, .accessibility dt, .accessibility figcaption {
-  font-size: .7rem;
-  color: black;
-  padding: .75em 1.5em;
-}
-
-.accessibility h2 {
-  font-size: 1rem;
-  font-weight: normal;
-}
-
 .accessibility .site-div h2 {
   background-color: #23103a;
   color: white;
@@ -1040,12 +933,12 @@ li {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 200px 350px 350px 350px 350px 300px;
-      grid-template-rows: 200px 350px 350px 350px 350px 300px;
+  -ms-grid-rows: 200px 350px 350px 350px 350px 150px;
+      grid-template-rows: 200px 350px 350px 350px 350px 150px;
       grid-template-areas: "id-def" "id-why" "id-tech" "id-coding" "id-resources" "contact";
   position: relative;
   grid-gap: 10px;
-  min-height: 100vh;
+  min-height: 20rem;
 }
 
 .accessibility .header-grid__id-def {
@@ -1071,7 +964,7 @@ li {
 }
 
 .accessibility .header-grid__id-def--tagline {
-  font-size: .78rem;
+  font-size: 0.7rem;
   color: #ff852d;
   line-height: 150%;
   font-weight: normal;
@@ -1521,24 +1414,36 @@ li {
 .side-nav ul {
   overflow: hidden;
   position: fixed;
-  font-size: .7rem;
+  font-size: 0.7rem;
   width: 100vw;
-  bottom: 4.5vh;
-  z-index: 50;
+  bottom: 2rem;
+  z-index: 100;
   background-color: #ff852d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media screen and (min-width: 48em) {
   .side-nav ul {
-    width: 13vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 6.5rem;
     right: 0;
-    bottom: 30%;
+    bottom: 25vh;
   }
 }
 
 .side-nav ul li {
   float: left;
-  line-height: 125%;
+  margin: 0;
 }
 
 @media screen and (min-width: 48em) {
@@ -1548,10 +1453,10 @@ li {
 }
 
 .side-nav ul li a {
-  font-size: .7rem;
+  font-size: 0.7rem;
   color: black;
-  padding: 7px 9px;
-  margin: 0 0 0 3px;
+  padding: .25rem .75rem;
+  line-height: 200%;
 }
 
 .side-nav ul li a:hover {
@@ -1563,7 +1468,6 @@ li {
 
 @media screen and (min-width: 48em) {
   .side-nav ul li a {
-    padding: 15px;
     float: right;
     width: 100%;
   }
@@ -1576,6 +1480,50 @@ li {
     right: 0;
     bottom: 30%;
   }
+}
+
+.under-development {
+  padding: 1.5em;
+}
+
+h3 {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 0.7rem;
+  padding: 0 0 0 1em;
+}
+
+p, figcaption {
+  font-size: 0.7rem;
+  color: black;
+  padding: .75rem 1.5rem;
+}
+
+a {
+  color: #a0204c;
+}
+
+li {
+  font-size: 0.7rem;
+  list-style-type: none;
+  line-height: 140%;
+}
+
+dd, dt {
+  font-size: 0.7rem;
+  padding: 0 1.25rem;
+}
+
+.light-text {
+  color: white;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: normal;
 }
 
 a {
@@ -1593,6 +1541,16 @@ body {
   color: #ff852d;
 }
 
+.grid-content-layout {
+  padding: 3vw;
+}
+
+@media screen and (min-width: 48em) {
+  .grid-content-layout {
+    padding: 0 5.5rem 0 3rem;
+  }
+}
+
 header {
   position: fixed;
   z-index: 100;
@@ -1603,30 +1561,57 @@ footer {
   background-color: #a0204c;
   position: fixed;
   bottom: 0;
-  color: #fff;
+  color: #a0204c;
   width: 100vw;
-  line-height: 200%;
-  padding: 0 1.5rem;
-  text-align: right;
-  font-size: .7rem;
+  padding: 0;
+  font-size: 0.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  z-index: 100;
 }
 
-footer .social-icon {
-  float: left;
-  color: #fff;
+@media screen and (min-width: 48em) {
+  footer {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 1.5rem;
+  }
 }
 
 footer .social-icons {
-  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-footer .social-icons a {
-  padding: 0 2.5vw 5vh 0;
+footer .social-icon {
+  color: white;
+  display: block;
+  padding: .5rem;
+}
+
+footer .social-icon:hover {
+  color: #ff852d;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
-footer .social-icons a:hover {
-  color: #ff852d;
+footer p {
+  padding: .5rem 0;
 }
 /*# sourceMappingURL=main.css.map */
