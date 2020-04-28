@@ -15,7 +15,6 @@ function toggleMenu() {
         menuNav.classList.add('open');
         navItems.forEach(item => item.classList.add('open'));
 
-
         showMenu = true;
     } else {
         hamburger.classList.remove('open');

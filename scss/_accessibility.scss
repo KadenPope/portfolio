@@ -1,23 +1,34 @@
+/************************* ACCESSIBILITY DEFAULT PAGE STYLES *****************************/
+
+
 .accessibility {
     width: 100vw;
-    display: grid;
-    grid-template-columns: 1fr;
-    color: $dark-text-color;
-    position: relative;
-    line-height: 110%;
 
     @include media-md {
-        width: 100vw;
         margin: 10vh auto 9vh auto;
     }
 
     @include media-lg {
-        width: 100vw;
         padding: 0 auto 10vh auto;
     }
 
+    h3 {
+        font-size: .8rem;
+        padding: 1.5rem 0 0 0;
+    }
+
+    dt {
+        font-weight: bold;
+    }
+
+    .site-div {
+        padding: 0 0 2rem 0;
+    }
+
+/*************************************  GRID SETUP (TOP-HEADING) ******************************/
     .header-grid {
-        display: grid;
+        @include top-grid-layout;
+
         grid-template-columns: 1fr;
         grid-template-rows: 200px 350px 350px 350px 350px 150px;
         grid-template-areas: 
@@ -27,37 +38,14 @@
             "id-coding"
             "id-resources"
             "contact";
-        position: relative;
-        grid-gap: 10px;
-        min-height: 20rem;
 
         &__id-def {
-            background-color: $secondary-color;
-            text-align: center;
-            width: 100%;
-            padding: 4em 0 0 0;
-
-            &--name {
-                font-size: 1.25rem;
-                color: $light-text-color;
-                line-height: 120%;
-
-                @include media-sm {
-                    padding: .25rem 0;
-                }
-            }
-
-            &--tagline {
-                font-size: $small-text-size;
-                color: $contrast-color;
-                line-height: 150%;
-                font-weight: normal;
-            }
+            @include second-grid-box;
 
             grid-area: id-def;
 
             @include media-md {
-                padding: 50px 0 0 0;
+                padding: 3em 0 0 0;
             }
         }
 
@@ -76,31 +64,12 @@
         &__id-resources {
             grid-area: id-resources;
         }
-
-        &__contact {
-            @include contact-formatting;
-        }
-
-        &__link-text {
-            position: absolute;
-            text-align: center;
-            padding: 1rem 0;
-            color: $light-text-color;
-            width: 100%;
-            background-color: rgba($secondary-color, .75);
-        }
-
-        &__img {
-            width: 100%;
-            height: 100%;
-        }
     } 
 
     @include media-md {
-
-
+        padding: 0 3vw 2rem 3vw;
         .header-grid {
-            width: 100%;
+            width: 100vw;
             position: relative;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 200px 350px 350px 200px;
@@ -118,10 +87,9 @@
     }
 
     @include media-lg {
-
+        padding: 0 3vw 2rem 3vw;
         .header-grid {
             width: 100%;
-            height: 90vh;
             position: relative;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             grid-template-rows: 350px 350px;
@@ -136,23 +104,38 @@
         }
     }
 
-    /**************************** WHAT IS INCLUSIVE DESIGN ******************/
+/**************************** WHAT IS INCLUSIVE DESIGN ******************/
 
     .id-def {
-
+        padding: 2rem 0 0 0;
         background-color: rgba($primary-color, .1);
 
-        &__grid--text {
-            figure {
-                width: 80vw;
-                margin: 0 auto;
-                border: 1px solid $contrast-color;
+        &__grid {
+            &--headshot {
+                padding: 1rem 0 0 1rem;
+                &-border {
+                    width: 50%;
+                    margin: 0 .5rem;
+                    border-radius: 1rem;
+                    border: 2px solid $contrast-color;
+                    float: right;
+                }
             }
-            a {
-                color: $accent-color;
+            &--text {
+                a {
+                    color: $accent-color;
+                }
+                figure {
+                    width: 75vw;
+                    margin: 0 auto;
+                    border: 2px solid $contrast-color;
+                }
             }
         }
     }
+
+
+/**************************** WHY INCLUSIVE DESIGN ******************/
 
     .id-why {
         width: 100vw;
@@ -160,6 +143,10 @@
         line-height: 110%;
         padding-bottom: 40px;
         background-color: rgba($contrast-color, .1);
+
+        @include media-md {
+            padding: 0 2rem 0 0;
+        }
     }
 
     .id-tech {
@@ -171,63 +158,16 @@
     }
 
     .id-resources {
-        padding: 0 0 7vh 0;
-        width: 100vw;
+        padding: 0 0 2rem 0;
         margin: auto;
         background-color: rgba($primary-color, .1);
-
-        @include media-md {
-            width: 80vw;
-        }
 
         &__title {
             margin-bottom: 10px;
         }
 
         &__activities {
-            width: 90%;
-            margin: auto;
-            display: grid;
-            grid-row-gap: 10px;
-            grid-column-gap: 10px;
-            grid-template-columns: 1fr;
-            grid-template-rows: 35vh 35vh 35vh 35vh;
-
-            @include media-sm {
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 175px 175px;
-            }
-
-            @include media-md {
-                grid-template-rows: 250px 250px;
-            }
-
-            @include media-lg {
-                grid-template-rows: 300px 300px;
-            }
-
-            @include media-xl {
-                grid-template-rows: 350px 350px;
-            }
-            &--activity {
-                position: relative;
-
-                h3 {
-                    text-align: center;
-                    color: set-text-color($primary-color);
-                    line-height: 250%;
-                    width: 100%;
-                    position: absolute;
-                    top: 0px;
-                    background-color: rgba($primary-color, .9);
-                    font-weight: normal;
-                }
-                img {
-                    height: 100%;
-                    width: 100%;
-                }
-            }
+            @include grid-activity-format;
         }
     }
 }
-

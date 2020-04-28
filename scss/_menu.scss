@@ -4,11 +4,11 @@
 
 .menu-btn {
     position: absolute;
-    z-index: 1;
-    left: .5rem;
+    z-index: 101;
+    left: 0;
     top: 1rem;
     height: 20px;
-    width: 28px;
+    width: 100vw;
     cursor: pointer;
     @include transition-ease;
 
@@ -19,7 +19,8 @@
 
     &__burger {
         position: absolute;
-        right: 0;
+        line-height: 150%;
+        left: 1rem;
         top: .5rem;
         width: 28px;
         height: 3px;
@@ -68,7 +69,6 @@
     z-index: 100;
     top: 0;
     left: 0;
-    width: 45vw;
     opacity: 0.98;
     visibility: hidden;
 
@@ -120,11 +120,11 @@
         a {
             display: block;
             margin: 0 0 0 0;
-            padding: .75em 0;
+            padding: 1.25em 0;
             width: 100%;
 
             @include media-md {
-                font-size: .7rem;
+                // font-size: .7rem;
                 padding: 15px 10px 5px 5px;
             }
         }

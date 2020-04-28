@@ -23,7 +23,7 @@
 
         @include media-md {
             flex-direction: column;
-            width: 6.5rem;
+            width: 5.5rem;
             right: 0;
             bottom: 25vh;
         }
@@ -50,6 +50,7 @@
                 @include media-md {
                     float: right;
                     width: 100%;
+                    line-height: 110%;
                 }
             }
         }
@@ -67,6 +68,15 @@
     padding: 1.5em;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
+h3, h4, p, figcaption, li, dt, dd {
+    color: $dark-text-color;
+}
+
 h3 {
     font-size: $small-text-size;
     font-weight: 600;
@@ -79,8 +89,7 @@ h4 {
 
 p, figcaption {
     font-size: $small-text-size;
-    color: $dark-text-color;
-    padding: .75rem 1.5rem;
+    padding: .5rem 1.5rem;
 }
 
 a {
@@ -90,7 +99,6 @@ a {
 li {
     font-size: $small-text-size;
     list-style-type: none;
-    // margin: 0 0 0 1.25rem;
     line-height: 140%;
 }
 

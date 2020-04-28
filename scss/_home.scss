@@ -6,8 +6,7 @@
     }
 
     .pages-grid {
-        display: grid;
-        grid-template-columns: 1fr;
+        @include top-grid-layout;
         grid-template-rows: 200px 350px 350px 350px 350px 200px;
         grid-template-areas: 
             "name"
@@ -16,12 +15,8 @@
             "photography"
             "design"
             "contact";
-        position: relative;
-        grid-gap: 10px;
-        min-height: 20rem;
 
         &__name {
-
             background-color: $primary-color;
             text-align: center;
             width: 100%;
@@ -85,11 +80,9 @@
             height: 100%;
         }
     }
-}
 
-@include media-md {
-    .home {
-        padding: 0 3vw 30vh 3vw;
+    @include media-md {
+        padding: 0 3vw 10vh 3vw;
         margin: 2.5rem 0 3rem 0;
 
         .pages-grid {
@@ -109,18 +102,16 @@
             }
         }
     }
-}
 
-@include media-lg {
-    .home {
-        padding: 0 3vw 10vh 3vw;
+    @include media-lg {
+        padding: 0 3vw 0 3vw;
 
         .pages-grid {
             width: 100%;
             height: 90vh;
             position: relative;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: 350px 350px;
+            grid-template-rows: 400px 400px;
             grid-gap: 10px;
             grid-template-areas: 
             "name         about         about   projects    projects"
@@ -128,11 +119,6 @@
 
             &__name--name {
                 padding: 0 10px 1em 10px;
-            }
-
-            &__contact {
-                align-items: center;
-                padding: 6rem 0 0 0;
             }
         }
     }
