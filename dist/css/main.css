@@ -316,15 +316,20 @@ img {
   grid-area: contact;
   background-color: #282d4f;
   text-align: center;
-  padding-top: 10vh;
+  padding-top: 7vh;
   line-height: 140%;
   height: 25vh;
   width: 100%;
-  font-size: .6em;
+  font-size: .6rem;
+  color: white;
 }
 
 .home .pages-grid__contact a {
   color: #ff852d;
+}
+
+.home .pages-grid__contact p {
+  color: white;
 }
 
 .home .pages-grid__link-text {
@@ -397,20 +402,25 @@ img {
   color: black;
   position: relative;
   line-height: 110%;
+  /*************************************  GRID SETUP (HEADING) ******************************/
+  /*********************************** ABOUT ME/SUMMARY ***********************************/
 }
 
 @media screen and (min-width: 48em) {
-  width: 100vw;
-  margin: 10vh auto 9vh auto;
+  .about {
+    width: 100vw;
+    margin: 10vh auto 9vh auto;
+  }
 }
 
 @media screen and (min-width: 64em) {
-  width: 100vw;
-  padding: 0 auto 10vh auto;
+  .about {
+    width: 100vw;
+    padding: 0 auto 10vh auto;
+  }
 }
 
-/*************************************  GRID SETUP (HEADING) ******************************/
-.header-grid {
+.about .header-grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -423,7 +433,7 @@ img {
   min-height: 8rem;
 }
 
-.header-grid__summary {
+.about .header-grid__summary {
   background-color: #23103a;
   text-align: center;
   width: 100%;
@@ -433,34 +443,34 @@ img {
   grid-area: summary;
 }
 
-.header-grid__summary--name {
+.about .header-grid__summary--name {
   font-size: 1.25rem;
   color: white;
   line-height: 120%;
 }
 
 @media screen and (min-width: 28em) {
-  .header-grid__summary--name {
+  .about .header-grid__summary--name {
     padding: .25rem 0;
   }
 }
 
-.header-grid__summary--tagline {
+.about .header-grid__summary--tagline {
   font-size: .78rem;
   color: #ff852d;
   line-height: 150%;
   font-weight: normal;
 }
 
-.header-grid__summary img {
+.about .header-grid__summary img {
   display: none;
 }
 
 @media screen and (min-width: 48em) {
-  .header-grid__summary {
+  .about .header-grid__summary {
     padding: 0 0 0 0;
   }
-  .header-grid__summary img {
+  .about .header-grid__summary img {
     display: block;
     margin: 0 auto;
     border-radius: 50%;
@@ -470,53 +480,53 @@ img {
   }
 }
 
-.header-grid__experience {
+.about .header-grid__experience {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: experience;
 }
 
-.header-grid__abilities {
+.about .header-grid__abilities {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: abilities;
 }
 
-.header-grid__education {
+.about .header-grid__education {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: education;
 }
 
-.header-grid__hobbies {
+.about .header-grid__hobbies {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: hobbies;
 }
 
-.header-grid__contact {
+.about .header-grid__contact {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: contact;
   background-color: #282d4f;
   text-align: center;
-  padding-top: 10vh;
+  padding-top: 7vh;
   line-height: 140%;
   height: 25vh;
   width: 100%;
-  font-size: .65rem;
+  font-size: .6rem;
   color: white;
 }
 
-.header-grid__contact a {
+.about .header-grid__contact a {
   color: #ff852d;
 }
 
-.header-grid__contact p {
+.about .header-grid__contact p {
   color: white;
 }
 
-.header-grid__link-text {
+.about .header-grid__link-text {
   position: absolute;
   text-align: center;
   padding: 1rem 0;
@@ -525,14 +535,16 @@ img {
   background-color: rgba(35, 16, 58, 0.75);
 }
 
-.header-grid__img {
+.about .header-grid__img {
   width: 100%;
   height: 100%;
 }
 
 @media screen and (min-width: 48em) {
-  padding: 0 10vw 30vh 10vw;
-  .header-grid {
+  .about {
+    padding: 0 10vw 30vh 10vw;
+  }
+  .about .header-grid {
     width: 100%;
     position: relative;
     -ms-grid-columns: 1fr 1fr;
@@ -541,15 +553,17 @@ img {
         grid-template-rows: 200px 350px 350px 200px;
         grid-template-areas: "summary        summary" "experience     abilities" "education      hobbies" "contact        contact";
   }
-  .header-grid__content {
+  .about .header-grid__content {
     position: absolute;
     height: 100%;
   }
 }
 
 @media screen and (min-width: 64em) {
-  padding: 0 3vw 10vh 3vw;
-  .header-grid {
+  .about {
+    padding: 0 3vw 10vh 3vw;
+  }
+  .about .header-grid {
     width: 100%;
     position: relative;
     -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -559,10 +573,10 @@ img {
     grid-gap: 10px;
         grid-template-areas: "summary      experience     experience      abilities    abilities" "education    education      hobbies         hobbies     contact";
   }
-  .header-grid__name--name {
+  .about .header-grid__name--name {
     padding: 0 10px 1em 10px;
   }
-  .header-grid__contact {
+  .about .header-grid__contact {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -570,13 +584,12 @@ img {
   }
 }
 
-/*********************************** ABOUT ME/SUMMARY ***********************************/
-.summary {
+.about .summary {
   margin: 0 auto;
   background-color: rgba(40, 45, 79, 0.1);
 }
 
-.summary__grid {
+.about .summary__grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -587,7 +600,7 @@ img {
 }
 
 @media screen and (min-width: 48em) {
-  .summary__grid {
+  .about .summary__grid {
     display: -ms-grid;
     display: grid;
     grid-gap: 4vh;
@@ -596,39 +609,39 @@ img {
   }
 }
 
-.summary__grid--headshot {
+.about .summary__grid--headshot {
   width: 70%;
   max-width: 250px;
   margin: 3vh auto;
 }
 
-.summary__grid--headshot-border {
+.about .summary__grid--headshot-border {
   border-radius: 50%;
   border: 9px solid #a0204c;
 }
 
-.summary__contact {
+.about .summary__contact {
   text-align: center;
   line-height: 150%;
 }
 
-.summary__contact--email {
+.about .summary__contact--email {
   color: #000;
 }
 
-.experience {
+.about .experience {
   margin: 0 auto;
   line-height: 110%;
   padding-bottom: 40px;
   background-color: rgba(255, 133, 45, 0.1);
 }
 
-.experience__grid {
+.about .experience__grid {
   margin: 0 auto;
 }
 
 @media screen and (min-width: 48em) {
-  .experience__grid {
+  .about .experience__grid {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 2.5fr 3.5fr;
@@ -637,68 +650,68 @@ img {
   }
 }
 
-.experience__grid--location {
+.about .experience__grid--location {
   padding: 0 1em;
   border-bottom: 2px solid #ff852d;
 }
 
-.experience__grid--location p {
+.about .experience__grid--location p {
   padding: .5em 0 1vh 5vw;
 }
 
 @media screen and (min-width: 48em) {
-  .experience__grid--location p {
+  .about .experience__grid--location p {
     padding-left: 2vw;
   }
 }
 
 @media screen and (min-width: 48em) {
-  .experience__grid--location {
+  .about .experience__grid--location {
     border-bottom: none;
   }
 }
 
-.experience__grid--location h3 {
+.about .experience__grid--location h3 {
   padding: 2rem 0 0 0;
 }
 
 @media screen and (min-width: 48em) {
-  .experience__grid--location h3 {
+  .about .experience__grid--location h3 {
     padding: 0;
   }
 }
 
-.experience__grid--details h4 {
+.about .experience__grid--details h4 {
   padding-top: .5rem;
 }
 
 @media screen and (min-width: 48em) {
-  .experience__grid--details h4 {
+  .about .experience__grid--details h4 {
     padding: 0 0 5px 0;
     border-bottom: 2px solid #282d4f;
   }
 }
 
-.experience__grid--details ul {
+.about .experience__grid--details ul {
   padding: 0 0 3vh 5vw;
 }
 
-.experience__grid--details ul li {
+.about .experience__grid--details ul li {
   list-style-type: circle;
 }
 
 @media screen and (min-width: 48em) {
-  .experience__grid--details ul {
+  .about .experience__grid--details ul {
     padding-top: 1vh;
   }
 }
 
-.abilities {
+.about .abilities {
   margin: 0 auto;
   background-color: rgba(40, 45, 79, 0.1);
 }
 
-.abilities__heading {
+.about .abilities__heading {
   width: 90%;
   padding: 7px 0 1vh 1vw;
   margin: 1.5vh auto;
@@ -707,7 +720,7 @@ img {
   font-size: .85em;
 }
 
-.abilities__skills {
+.about .abilities__skills {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -715,11 +728,11 @@ img {
   margin: 0 auto;
 }
 
-.abilities__skills a {
+.about .abilities__skills a {
   color: #a0204c;
 }
 
-.abilities__skills h3 {
+.about .abilities__skills h3 {
   color: black;
   font-weight: bold;
   padding: 2.5rem 0px 5px 5px;
@@ -728,7 +741,7 @@ img {
 }
 
 @media screen and (min-width: 48em) {
-  .abilities__skills dl {
+  .about .abilities__skills dl {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 3.5fr;
@@ -736,29 +749,29 @@ img {
   }
 }
 
-.abilities__skills dt {
+.about .abilities__skills dt {
   font-weight: 600;
   margin: 1.25rem 0 0 0;
 }
 
 @media screen and (min-width: 48em) {
-  .abilities__skills dt {
+  .about .abilities__skills dt {
     margin: 0;
   }
 }
 
-.abilities__skills dd {
+.about .abilities__skills dd {
   margin: 0 0 1.5rem 0;
 }
 
-.education {
+.about .education {
   background-color: rgba(255, 133, 45, 0.1);
   margin: 0 auto;
   padding-bottom: 4.5vh;
 }
 
 @media screen and (min-width: 48em) {
-  .education__grid {
+  .about .education__grid {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 2fr 3fr;
@@ -767,53 +780,53 @@ img {
   }
 }
 
-.education__grid--location {
+.about .education__grid--location {
   border-bottom: 2px solid #ff852d;
   padding: 2rem 0 0 0;
 }
 
 @media screen and (min-width: 48em) {
-  .education__grid--location {
+  .about .education__grid--location {
     border-bottom: none;
   }
 }
 
 @media screen and (min-width: 48em) {
-  .education__grid--details {
+  .about .education__grid--details {
     padding-bottom: 15px;
   }
 }
 
-.education__grid--details h4 {
+.about .education__grid--details h4 {
   padding-top: 8px;
 }
 
 @media screen and (min-width: 48em) {
-  .education__grid--details h4 {
+  .about .education__grid--details h4 {
     padding: 0 0 5px 0;
     border-bottom: 2px solid #ff852d;
   }
 }
 
-.education__grid--details ul {
+.about .education__grid--details ul {
   padding: 1vh 0 0 5vw;
 }
 
-.education__grid--details ul li {
+.about .education__grid--details ul li {
   list-style-type: circle;
 }
 
-.hobbies {
+.about .hobbies {
   padding: 0 0 6em 0;
   margin: auto;
   background-color: rgba(40, 45, 79, 0.1);
 }
 
-.hobbies__title {
+.about .hobbies__title {
   margin-bottom: 10px;
 }
 
-.hobbies__activities {
+.about .hobbies__activities {
   width: 100%;
   margin: auto;
   display: -ms-grid;
@@ -827,7 +840,7 @@ img {
 }
 
 @media screen and (min-width: 28em) {
-  .hobbies__activities {
+  .about .hobbies__activities {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 175px 175px;
@@ -836,31 +849,31 @@ img {
 }
 
 @media screen and (min-width: 48em) {
-  .hobbies__activities {
+  .about .hobbies__activities {
     -ms-grid-rows: 250px 250px;
         grid-template-rows: 250px 250px;
   }
 }
 
 @media screen and (min-width: 64em) {
-  .hobbies__activities {
+  .about .hobbies__activities {
     -ms-grid-rows: 300px 300px;
         grid-template-rows: 300px 300px;
   }
 }
 
 @media screen and (min-width: 100em) {
-  .hobbies__activities {
+  .about .hobbies__activities {
     -ms-grid-rows: 350px 350px;
         grid-template-rows: 350px 350px;
   }
 }
 
-.hobbies__activities--activity {
+.about .hobbies__activities--activity {
   position: relative;
 }
 
-.hobbies__activities--activity h3 {
+.about .hobbies__activities--activity h3 {
   text-align: center;
   color: #fff;
   line-height: 250%;
@@ -871,7 +884,7 @@ img {
   font-weight: normal;
 }
 
-.hobbies__activities--activity img {
+.about .hobbies__activities--activity img {
   height: 100%;
   width: 100%;
 }
@@ -980,11 +993,11 @@ img {
   grid-area: contact;
   background-color: #282d4f;
   text-align: center;
-  padding-top: 10vh;
+  padding-top: 7vh;
   line-height: 140%;
   height: 25vh;
   width: 100%;
-  font-size: .65rem;
+  font-size: .6rem;
   color: white;
 }
 

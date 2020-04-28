@@ -68,17 +68,7 @@
         }
 
         &__contact {
-            grid-area: contact;
-            background-color: $primary-color;
-            text-align: center;
-            padding-top: 10vh;
-            line-height: 140%;
-            height: 25vh;
-            width: 100%;
-            font-size: .6em;
-            a {
-                color: $contrast-color;
-            }
+            @include contact-formatting;
         }
 
         &__link-text {

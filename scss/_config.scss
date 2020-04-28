@@ -32,6 +32,23 @@ img {
 @mixin transition-ease {
     transition: all .3s ease-in-out;
 }
+@mixin contact-formatting {
+    grid-area: contact;
+    background-color: $primary-color;
+    text-align: center;
+    padding-top: 7vh;
+    line-height: 140%;
+    height: 25vh;
+    width: 100%;
+    font-size: .6rem;
+    color: $light-text-color;
+    a {
+        color: $contrast-color;
+    }
+    p {
+        color: $light-text-color;
+    }
+}
 
 @function set-text-color($color) {
     @if (lightness($color) > 40%) {
