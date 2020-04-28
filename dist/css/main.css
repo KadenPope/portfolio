@@ -435,7 +435,7 @@ img {
       grid-template-areas: "summary" "experience" "abilities" "education" "hobbies" "contact";
   position: relative;
   grid-gap: 10px;
-  min-height: 10rem;
+  min-height: 8rem;
 }
 
 .about .header-grid__summary {
@@ -1546,6 +1546,12 @@ body {
 }
 
 @media screen and (min-width: 48em) {
+  .grid-content-layout {
+    padding: 0 3.25rem 0 1.5rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
   .grid-content-layout {
     padding: 0 5.5rem 0 3rem;
   }

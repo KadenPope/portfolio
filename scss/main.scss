@@ -129,6 +129,12 @@ body {
 
 @include media-md {
     .grid-content-layout {
+        padding: 0 3.25rem 0 1.5rem;
+    }
+}
+
+@include media-lg {
+    .grid-content-layout {
         padding: 0 5.5rem 0 3rem;
     }
 }
