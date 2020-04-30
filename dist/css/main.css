@@ -942,8 +942,8 @@ html {
   grid-gap: 10px;
   min-height: 20rem;
   grid-template-columns: 1fr;
-  -ms-grid-rows: 200px 350px 350px 350px 350px 150px;
-      grid-template-rows: 200px 350px 350px 350px 350px 150px;
+  -ms-grid-rows: 200px 350px 350px 350px 350px 200px;
+      grid-template-rows: 200px 350px 350px 350px 350px 200px;
       grid-template-areas: "id-def" "id-why" "id-tech" "id-coding" "id-resources" "contact";
 }
 

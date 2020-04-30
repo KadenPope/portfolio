@@ -1,6 +1,5 @@
 /************************* ACCESSIBILITY DEFAULT PAGE STYLES *****************************/
 
-
 .accessibility {
     width: 100vw;
 
@@ -30,7 +29,7 @@
         @include top-grid-layout;
 
         grid-template-columns: 1fr;
-        grid-template-rows: 200px 350px 350px 350px 350px 150px;
+        grid-template-rows: 200px 350px 350px 350px 350px 200px;
         grid-template-areas: 
             "id-def"
             "id-why"
