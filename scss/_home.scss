@@ -1,12 +1,12 @@
 .home {
     width: 100vw;
 
-    @include media-md {
-        margin: 10vh auto 0vh auto;
-    }
-
     .pages-grid {
         @include top-grid-layout;
+        @include media-md {
+            margin: 10vh 0 0 0;
+        }
+    
         grid-template-rows: 200px 350px 350px 350px 350px 200px;
         grid-template-areas: 
             "name"
@@ -23,7 +23,6 @@
             padding: 2rem 0 0 0;
 
             &--name {
-                font-size: 1.25rem;
                 line-height: 120%;
 
                 @include media-sm {
@@ -37,9 +36,7 @@
             }
 
             &--tagline {
-                font-size: .78rem;
                 color: $contrast-color;
-                line-height: 150%;
                 font-weight: normal;
             }
             grid-area: name;

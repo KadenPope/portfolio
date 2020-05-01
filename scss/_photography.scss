@@ -2,7 +2,7 @@
 .photography {
     margin: 0 auto;
     width: 100vw;
-    padding: 0  0 10vh 0;
+    padding: 0 0 10vh 0;
 
     &__photos {
         border: 5px solid $light-text-color;
@@ -39,17 +39,16 @@
             width: 100%;
             color: $light-text-color;
             text-align: center;
-            font-size: 1.5rem;
-            line-height: 250%;
+            line-height: 140%;
 
             @include media-md {
                 line-height: 140%;
-                padding-top: 5vh;
+                padding-top: 2.5vh;
                 border-right: 10px solid $light-text-color;
                 border-left: 10px solid $light-text-color;
             }
             @include media-xl {
-                padding-top: 7vh;
+                padding-top: 5vh;
             }
         }
     }
@@ -159,22 +158,22 @@
     // ***************************  KADEN WHY PHOTOGRAPHY ****************************//
 
     &__photos {
-        font-size: 1.5em;
+        font-size: $medium-text-size;
         background-color: $secondary-color;
+        color: $light-text-color;
     }
     
     &__kaden-ideas, &__photos {
         margin: 1vh auto 0 auto;
+        color: $contrast-color;
         p {
             text-align: center;
             padding: 2vh;
-            font-size: .6em;
+            color: $light-text-color;
         }
         h2 {
-            color: $contrast-color;
             text-align: center;
             padding: 0 0 2vh 0;
-            font-size: .8em;
         }
     }
 
@@ -196,7 +195,6 @@
                 color: white;
                 background-color: $secondary-color;
                 padding: 2vh 0 1vh 0;
-                font-size: .8em;
 
                 @include media-md {
                     padding: 3vh 0;
@@ -208,10 +206,6 @@
                 min-height: 160px;
                 color: $dark-text-color;
                 background-color: rgba($primary-color, .2);
-
-                li {
-                    font-size: .65em;
-                }
             }
         }
     }

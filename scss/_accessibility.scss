@@ -2,6 +2,7 @@
 
 .accessibility {
     width: 100vw;
+    margin: 0 0 14vh 0;
 
     @include media-md {
         margin: 10vh auto 9vh auto;
@@ -9,11 +10,6 @@
 
     @include media-lg {
         padding: 0 auto 10vh auto;
-    }
-
-    h3 {
-        font-size: .8rem;
-        padding: 1.5rem 0 0 0;
     }
 
     dt {
@@ -39,7 +35,7 @@
             "contact";
 
         &__id-def {
-            @include second-grid-box;
+            @include first-grid-box;
 
             grid-area: id-def;
 
@@ -68,7 +64,7 @@
     @include media-md {
         padding: 0 3vw 2rem 3vw;
         .header-grid {
-            width: 100vw;
+            width: 100%;
             position: relative;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 200px 350px 350px 200px;
@@ -110,8 +106,12 @@
         background-color: rgba($primary-color, .1);
 
         &__grid {
+            max-width: $max-content-width;
+            margin: 0 auto;
+            padding: 1.5rem 1rem;
+
             &--headshot {
-                padding: 1rem 0 0 1rem;
+                padding: 1rem 1rem 0 1rem;
                 &-border {
                     width: 50%;
                     margin: 0 .5rem;
@@ -125,8 +125,11 @@
                     color: $accent-color;
                 }
                 figure {
+                    clear: both;
                     width: 75vw;
+                   
                     margin: 0 auto;
+                    max-width: $max-content-width;
                     border: 2px solid $contrast-color;
                 }
             }
@@ -137,9 +140,7 @@
 /**************************** WHY INCLUSIVE DESIGN ******************/
 
     .id-why {
-        width: 100vw;
         margin: 0 auto;
-        line-height: 110%;
         padding-bottom: 40px;
         background-color: rgba($contrast-color, .1);
 

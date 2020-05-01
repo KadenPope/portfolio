@@ -4,7 +4,10 @@ $accent-color: #a0204c;
 $contrast-color: #ff852d;
 $light-text-color: white;
 $dark-text-color: black;
-$small-text-size: .7rem;
+$small-text-size: 1rem;
+$medium-text-size: 1.5rem;
+$large-text-size: 2.5rem;
+$max-content-width: 800px;
 $font-style: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 
@@ -19,8 +22,7 @@ $font-style: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
-    font-size: calc(1em + 1vw);
-    line-height: 110%;
+    font-size: 16px;
     font-weight: normal;
 }
 
@@ -32,16 +34,14 @@ html {
     background-color: $primary-color;
     text-align: center;
     padding-top: 7vh;
-    line-height: 140%;
     height: 25vh;
     width: 100%;
-    font-size: .6rem;
-    color: $light-text-color;
     a {
         color: $contrast-color;
     }
     p {
         color: $light-text-color;
+        font-size: $medium-text-size;
     }
 }
 
@@ -71,14 +71,13 @@ html {
     }
 }
 
-@mixin second-grid-box {
+@mixin first-grid-box {
     background-color: $secondary-color;
     text-align: center;
     width: 100%;
     padding: 4em 0 0 0;
 
     &--name {
-        font-size: 1.25rem;
         color: $light-text-color;
         line-height: 120%;
 
@@ -90,7 +89,7 @@ html {
     &--tagline {
         font-size: $small-text-size;
         color: $contrast-color;
-        line-height: 150%;
+        // line-height: 150%;
         font-weight: normal;
     }
 }

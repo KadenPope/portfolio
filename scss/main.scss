@@ -5,6 +5,93 @@
 @import 'accessibility';
 @import 'photography';
 
+.under-development {
+    padding: 1.5em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h3, h4, p, figcaption, li, dt, dd, a {
+    color: $dark-text-color;
+    line-height: 140%;
+}
+
+h1 {
+    font-size: $large-text-size;
+}
+
+h2 {
+    font-size: $medium-text-size;
+    font-weight: normal;
+    line-height: 110%;
+}
+
+h3 {
+    font-size: $medium-text-size;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: $small-text-size;
+    padding: 0 0 0 1em;
+}
+
+p, figcaption {
+    font-size: $small-text-size;
+    padding: .5rem 1.5rem;
+}
+
+a {
+    color: $accent-color;
+}
+
+li {
+    font-size: $small-text-size;
+    list-style-type: none;
+}
+
+dd, dt {
+    font-size: $small-text-size;
+    padding: 0 1.25rem;
+}
+
+.light-text {
+    color: $light-text-color;
+}
+
+a {
+    text-decoration: none;
+    color: set-text-color($primary-color);
+}
+
+body {
+    color: set-text-color($secondary-color);
+    font-family: $font-style;
+    background-color: white;
+}
+
+.text-secondary {
+    color: $contrast-color;
+}
+
+.grid-content-layout {
+    padding: 3vw;
+}
+
+.max-content {
+    max-width: $max-content-width;
+    margin: 0 auto;
+}
+
+@include media-md {
+    .grid-content-layout {
+        padding: 0;
+    }
+}
+
 /********************************* SIDE NAVIGATION STYLING ****************************/
 
 .side-nav {
@@ -23,7 +110,7 @@
 
         @include media-md {
             flex-direction: column;
-            width: 5.5rem;
+            width: 6.5rem;
             right: 0;
             bottom: 25vh;
         }
@@ -50,7 +137,7 @@
                 @include media-md {
                     float: right;
                     width: 100%;
-                    line-height: 110%;
+                    line-height: 120%;
                 }
             }
         }
@@ -64,143 +151,14 @@
     }
 }
 
-.under-development {
-    padding: 1.5em;
-}
-
-img {
-    width: 100%;
-    height: auto;
-}
-
-h3, h4, p, figcaption, li, dt, dd {
-    color: $dark-text-color;
-}
-
-h3 {
-    font-size: $small-text-size;
-    font-weight: 600;
-}
-
-h4 {
-    font-size: $small-text-size;
-    padding: 0 0 0 1em;
-}
-
-p, figcaption {
-    font-size: $small-text-size;
-    padding: .5rem 1.5rem;
-}
-
-a {
-    color: $accent-color;
-}
-
-li {
-    font-size: $small-text-size;
-    list-style-type: none;
-    line-height: 140%;
-}
-
-dd, dt {
-    font-size: $small-text-size;
-    padding: 0 1.25rem;
-}
-
-.light-text {
-    color: $light-text-color;
-}
-
-h2 {
-    font-size: 1rem;
-    font-weight: normal;
-}
-
-a {
-    text-decoration: none;
-    color: set-text-color($primary-color);
-}
-
-body {
-    color: set-text-color($secondary-color);
-    font-family: $font-style;
-    background-color: white;
-}
-
-.text-secondary {
-    color: $contrast-color;
-}
-
-.grid-content-layout {
-    padding: 3vw;
-}
-
-@include media-md {
-    .grid-content-layout {
-        padding: 0 3.25rem 0 1.5rem;
-    }
-}
-
-@include media-lg {
-    .grid-content-layout {
-        padding: 0 5.5rem 0 3rem;
-    }
-}
-
 .site-div {
     h2 {
         background-color: $secondary-color;
         color: $light-text-color;
         border-top: 55px solid white;
         text-align: center;
-        font-size: 1rem;
-        line-height: 300%;
+        line-height: 200%;
         width: 100%;
         font-weight: normal;
-    }
-}
-
-header {
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-}
-
-footer {
-    background-color: $accent-color;
-    position: fixed;
-    bottom: 0;
-    color: $accent-color;
-    width: 100vw;
-    padding: 0;    
-    font-size: $small-text-size;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    z-index: 100;
-
-    @include media-md {
-        justify-content: space-between;
-        padding: 0 1.5rem
-    }
-
-
-    .social-icons {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .social-icon {
-        color: $light-text-color;
-        display: block;
-        padding: .5rem;
-        &:hover {
-            color: $contrast-color;
-            @include transition-ease;
-        }
-    }
-    p {
-        padding: .5rem 0;
-
     }
 }
