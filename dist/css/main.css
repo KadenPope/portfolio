@@ -160,6 +160,7 @@ html {
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   padding: 5px 1.75rem 5px 1.25rem;
+  margin: 0;
 }
 
 .menu-nav__item a {
@@ -182,7 +183,7 @@ html {
     padding: 0 10px 4px 10px;
   }
   .menu-nav__item a {
-    line-height: 190%;
+    line-height: 170%;
   }
 }
 
@@ -234,10 +235,10 @@ footer {
   background-color: #a0204c;
   position: fixed;
   bottom: 0;
-  color: #a0204c;
+  color: white;
   width: 100vw;
   padding: 0;
-  font-size: 1rem;
+  font-size: 1.1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,7 +274,6 @@ footer .social-icons {
 }
 
 footer .social-icon {
-  color: white;
   display: block;
   padding: .5rem;
   -ms-flex-item-align: center;
@@ -289,6 +289,13 @@ footer .social-icon:hover {
 
 footer p {
   padding: .5rem 0;
+  color: white;
+}
+
+@media screen and (min-width: 48em) {
+  footer p {
+    padding: 1rem 0;
+  }
 }
 
 .home {
@@ -567,7 +574,7 @@ footer p {
 }
 
 .about .header-grid__summary--tagline {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #ff852d;
   font-weight: normal;
 }
@@ -906,6 +913,7 @@ footer p {
       grid-template-columns: 1fr;
   -ms-grid-rows: 35vh 35vh 35vh 35vh;
       grid-template-rows: 35vh 35vh 35vh 35vh;
+  max-width: 1200px;
 }
 
 @media screen and (min-width: 28em) {
@@ -1057,7 +1065,7 @@ footer p {
 }
 
 .accessibility .header-grid__id-def--tagline {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #ff852d;
   font-weight: normal;
 }
@@ -1171,6 +1179,16 @@ footer p {
   background-color: rgba(255, 133, 45, 0.1);
 }
 
+.accessibility .id-why__grid {
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accessibility .id-why__grid p {
+  padding: 0 0 .75rem 0;
+}
+
 @media screen and (min-width: 48em) {
   .accessibility .id-why {
     padding: 0 2rem 0 0;
@@ -1206,6 +1224,7 @@ footer p {
       grid-template-columns: 1fr;
   -ms-grid-rows: 35vh 35vh 35vh 35vh;
       grid-template-rows: 35vh 35vh 35vh 35vh;
+  max-width: 1200px;
 }
 
 @media screen and (min-width: 28em) {
@@ -1479,6 +1498,11 @@ footer p {
   background-color: rgba(40, 45, 79, 0.2);
 }
 
+.photography__kaden-ideas--columns ul li {
+  list-style-type: circle;
+  line-height: 160%;
+}
+
 .under-development {
   padding: 1.5em;
 }
@@ -1509,13 +1533,12 @@ h3 {
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   padding: 0 0 0 1em;
 }
 
 p, figcaption {
-  font-size: 1rem;
-  padding: .5rem 1.5rem;
+  font-size: 1.1rem;
 }
 
 a {
@@ -1523,12 +1546,13 @@ a {
 }
 
 li {
-  font-size: 1rem;
+  font-size: 1.1rem;
   list-style-type: none;
+  margin: 0 1rem;
 }
 
 dd, dt {
-  font-size: 1rem;
+  font-size: 1.1rem;
   padding: 0 1.25rem;
 }
 
@@ -1552,7 +1576,7 @@ body {
 }
 
 .grid-content-layout {
-  padding: 3vw;
+  padding: 1.5vw;
 }
 
 .max-content {
@@ -1566,6 +1590,12 @@ body {
   }
 }
 
+@media screen and (min-width: 65em) {
+  .grid-content-layout {
+    padding: 0 5.5rem 0 3rem;
+  }
+}
+
 /********************************* SIDE NAVIGATION STYLING ****************************/
 .side-nav {
   display: none;
@@ -1574,9 +1604,9 @@ body {
 .side-nav ul {
   overflow: hidden;
   position: fixed;
-  font-size: 1rem;
+  font-size: 1.1rem;
   width: 100vw;
-  bottom: 2rem;
+  bottom: 2.6rem;
   z-index: 100;
   background-color: #ff852d;
   display: -webkit-box;
@@ -1613,7 +1643,7 @@ body {
 }
 
 .side-nav ul li a {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: black;
   padding: .25rem .75rem;
   line-height: 200%;

@@ -41,7 +41,7 @@ h4 {
 
 p, figcaption {
     font-size: $small-text-size;
-    padding: .5rem 1.5rem;
+    // padding: .5rem 1.5rem;
 }
 
 a {
@@ -51,6 +51,7 @@ a {
 li {
     font-size: $small-text-size;
     list-style-type: none;
+    margin: 0 1rem;
 }
 
 dd, dt {
@@ -78,7 +79,7 @@ body {
 }
 
 .grid-content-layout {
-    padding: 3vw;
+    padding: 1.5vw;
 }
 
 .max-content {
@@ -92,6 +93,12 @@ body {
     }
 }
 
+@include media-lg {
+    .grid-content-layout {
+        padding: 0 5.5rem 0 3rem;
+    }
+}
+
 /********************************* SIDE NAVIGATION STYLING ****************************/
 
 .side-nav {
@@ -101,7 +108,7 @@ body {
         position: fixed;
         font-size: $small-text-size;
         width: 100vw;
-        bottom: 2rem;
+        bottom: 2.6rem;
         z-index: 100;
         background-color: $contrast-color;
         display: flex;

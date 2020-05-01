@@ -206,6 +206,10 @@
                 min-height: 160px;
                 color: $dark-text-color;
                 background-color: rgba($primary-color, .2);
+                li {
+                    list-style-type: circle;
+                    line-height: 160%;
+                }
             }
         }
     }

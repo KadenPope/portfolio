@@ -315,6 +315,7 @@
 
         &__activities {
             @include grid-activity-format;
+            max-width: 1200px;
         }
     }
 }

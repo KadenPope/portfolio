@@ -144,6 +144,15 @@
         padding-bottom: 40px;
         background-color: rgba($contrast-color, .1);
 
+        &__grid {
+            padding: 1rem;
+            max-width: $max-content-width;
+            margin: 0 auto;
+             p {
+                 padding: 0 0 .75rem 0;
+             }
+        }
+
         @include media-md {
             padding: 0 2rem 0 0;
         }
@@ -168,6 +177,7 @@
 
         &__activities {
             @include grid-activity-format;
+            max-width: 1200px;
         }
     }
 }
