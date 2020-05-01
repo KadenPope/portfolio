@@ -1,15 +1,14 @@
 /************************* ABOUT DEFAULT PAGE STYLES *****************************/
 
 .about {
-    width: 100vw;
+    width: 100%;
 
     @include media-md {
-        width: 100vw;
         margin: 10vh auto 9vh auto;
     }
 
     @include media-lg {
-        width: 100vw;
+        width: 100%;
         padding: 0 auto 10vh auto;
     }
 

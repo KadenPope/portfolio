@@ -486,21 +486,20 @@ footer p {
 
 /************************* ABOUT DEFAULT PAGE STYLES *****************************/
 .about {
-  width: 100vw;
+  width: 100%;
   /*************************************  GRID SETUP (HEADING) ******************************/
   /*********************************** ABOUT ME/SUMMARY ***********************************/
 }
 
 @media screen and (min-width: 48em) {
   .about {
-    width: 100vw;
     margin: 10vh auto 9vh auto;
   }
 }
 
 @media screen and (min-width: 65em) {
   .about {
-    width: 100vw;
+    width: 100%;
     padding: 0 auto 10vh auto;
   }
 }
