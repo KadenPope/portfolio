@@ -238,7 +238,7 @@ footer {
   color: white;
   width: 100vw;
   padding: 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -574,7 +574,7 @@ footer p {
 }
 
 .about .header-grid__summary--tagline {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #ff852d;
   font-weight: normal;
 }
@@ -1065,7 +1065,7 @@ footer p {
 }
 
 .accessibility .header-grid__id-def--tagline {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #ff852d;
   font-weight: normal;
 }
@@ -1533,12 +1533,12 @@ h3 {
 }
 
 h4 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding: 0 0 0 1em;
 }
 
 p, figcaption {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 a {
@@ -1546,13 +1546,13 @@ a {
 }
 
 li {
-  font-size: 1.1rem;
+  font-size: 1rem;
   list-style-type: none;
   margin: 0 1rem;
 }
 
 dd, dt {
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding: 0 1.25rem;
 }
 
@@ -1604,7 +1604,7 @@ body {
 .side-nav ul {
   overflow: hidden;
   position: fixed;
-  font-size: 1.1rem;
+  font-size: 1rem;
   width: 100vw;
   bottom: 2.6rem;
   z-index: 100;
@@ -1643,7 +1643,7 @@ body {
 }
 
 .side-nav ul li a {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: black;
   padding: .25rem .75rem;
   line-height: 200%;
